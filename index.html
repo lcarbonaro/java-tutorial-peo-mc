@@ -10,6 +10,10 @@
     section.left {
       text-align: left;
     }
+    aside.notes {
+      font-size: 12px !important;
+    }
+    
   </style>
 </head>
 
@@ -149,29 +153,64 @@
         <h2 data-id="code-title">Basic Source File Structure</h2>
         <pre data-id="code-animation">
               <code class="hljs java" data-trim data-line-numbers>
-                // 1. everything needs to be inside a class
-                public class Main {
-                  ...
-                }  
+        
               </code>
             </pre>
+            <aside class="notes">
+              <p>And by file here I mean SOURCE file</p>
+              <p>
+                Java is a compiled language, meaning we write our code in source
+                files
+              </p>
+              <p>which are then compiled by the Java compiler</p>        
+
+            </aside>
       </section>
 
       <section data-auto-animate>
         <h2 data-id="code-title">Basic Source File Structure</h2>
         <pre data-id="code-animation">
-              <code class="hljs java" data-trim data-line-numbers="4-7">
+              <code class="hljs java" data-trim data-line-numbers>
+                // 1. everything needs to be inside a class
+                public class Main {
+                  
+
+
+                }  
+              </code>
+            </pre>
+            <aside class="notes">
+              <p>And by file here I mean SOURCE file</p>
+              <p>
+                Java is a compiled language, meaning we write our code in source
+                files
+              </p>
+              <p>which are then compiled by the Java compiler</p>
+              <p>rule#1: everything needs to be in a class</p>
+
+            </aside>
+      </section>
+
+      <section data-auto-animate>
+        <h2 data-id="code-title">Basic Source File Structure</h2>
+        <pre data-id="code-animation">
+              <code class="hljs java" data-trim data-line-numbers="4-8">
                 // 1. everything needs to be inside a class
                 public class Main {
 
-                  // 2. every class needs at least one main method
+                  // 2. every class needs at least one method
                   public static void main(String[] args) {
-                    ...
+                    
+
                   }
 
                 }  
               </code>
             </pre>
+            <aside class="notes">
+              <p>rule#2: every class needs at least one method, typically a method called main</p>
+
+            </aside>
       </section>
 
       <section data-auto-animate>
@@ -183,7 +222,8 @@
 
               // 2. every class needs at least one method
               public static void main(String[] args) {
-                ...
+                
+
               }
 
             }  
@@ -191,20 +231,13 @@
         </pre>
 
         <aside class="notes">
-          <p>And by file here I mean source file</p>
-          <p>
-            Java is a compiled language, meaning we write our code in source
-            files
-          </p>
-          <p>which are then compiled by the Java compiler</p>
-
           <p>general syntax & structure</p>
           <p>- everything needs to be inside a class</p>
           <p>- any logic needs to be inside a method</p>
           <p>- curly brackets at start/end of blocks</p>
           <p>- each program needs to have a main method to start from</p>
           <p>- here named the class Main</p>
-          <p>     classname starts uppercase first letter</p>
+          <p>- classname starts uppercase first letter</p>
         </aside>
       </section>
 
@@ -215,12 +248,22 @@
                 // 1. everything needs to be inside a class
                 public class Main {
 
-                  // 2. every class needs at least one main method
+                  // 2. every class needs at least one method
                   public static void main(String[] args) {
-                    ...
-                  }
 
-                }  
+                    /* 
+                    a method contains programming logic                
+                    */                    
+
+                  } // end of method block 
+
+
+                  // other methods if any go here
+
+
+                }  // end of class block
+
+
               </code>
             </pre>
 
@@ -230,16 +273,20 @@
       </section>
 
       <section class="left">
-        <h2>Outputs <span class="fragment">(or Hello World!)</span></h2>
+        <h2>Outputs</h2>
         <pre data-id="code-animation">
-          <code class="hljs java" data-trim data-line-numbers="7-8">
+          <code class="hljs java" data-trim data-line-numbers>
             // 1. everything needs to be inside a class
             public class Main {
 
               // 2. every class needs at least one method
               public static void main(String[] args) {
+
+                /* 
+                a method contains programming logic                
+                */
                 
-                // some output
+                // some output message
                 System.out.println("Hello World");
 
               }
@@ -250,44 +297,71 @@
 
 
         <aside class="notes">
-          <p>System meaning the computer</p> 
-          <p>out because it's output </p>
-          <p>println meaning print line</p>
-          <p>note: semicolon at end of line</p>
-          <p>type in examples</p>
-          <p> - print a string hello world</p>
-          <p> - print a number</p>
-          <p> - print a combo string + number (concat)</p>
-          <p>note use of comments to explain, clarify etc</p>
-          <p>   - // for single line comments</p>
-          <p>   - /* */ for multi line comments</p>
+          <p style="font-size:16px;">System meaning the computer</p> 
+          <p style="font-size:16px;">out because it's output </p>
+          <p style="font-size:16px;">println meaning print line</p>
+          <p style="font-size:16px;">note: semicolon at end of line</p>
+          <p style="font-size:16px;">type in examples</p>
+          <p style="font-size:16px;"> - print a string hello world</p>
+          <p style="font-size:16px;"> - print a number</p>
+          <p style="font-size:16px;"> - print a combo string + number (concat)</p>
+          <p style="font-size:16px;">note use of comments to explain, clarify etc</p>
+          <p style="font-size:16px;">   - // for single line comments</p>
+          <p style="font-size:16px;">   - /* */ for multi line comments</p>
         </aside>
       </section>
 
       <section class="left">
         <h2>Some Variable Types</h2>
-        <p class="fragment">(the most commonly used)</p>
+        <p class="fragment">(The most commonly used)</p>
 
-        <ul>
-          <li class="fragment">integer</li>
-          <li class="fragment">float</li>
-          <li class="fragment">double</li>
-          <li class="fragment">boolean</li>
-          <li class="fragment">char</li>
-          <li class="fragment">String</li>          
+        <ul class="fragment">
+          <li>int</li>
+          <li>float</li>
+          <li>double</li>
+          <li>boolean</li>
+          <li>char</li>
+          <li>String</li>          
         </ul>
 
         <aside class="notes">
-          <p>so far we printed literal strings and numbers </p>
-          <p>but many times we need to store values</p>
-          <p>maybe to process or manipulate them in some way before output</p>
           <p>a variable is a value stored in memory</p>
-
+          <p>so far we printed literal strings and numbers </p>
+          <p>but many times we need to store values in variables</p>
+          <p>maybe to process or manipulate them in some way before output</p>
           <p>note: Java is a strongly typed language</p>
+          <p>meaning we must declare ahead of time what type 
+            of value we need to store in that variable</p>
+        </aside>
+      </section>
+
+      <section class="left">
+        <h2>Some Variable Types</h2>
+        <p >(The most commonly used)</p>
+
+        <ul>
+          <li>int</li>
+          <li>float</li>
+          <li>double</li>
+          <li>boolean</li>
+          <li>char</li>
+          <li>String</li>          
+        </ul>
+
+        <p>Let's see some code examples...</p>
+
+        <aside class="notes">
+          <p>int qty = 5;</p>          
+          <p>float price = 5.99f;  </p>
+          <p>double exchangeRate = 15.754d;   </p>
+          <p>boolean isMember = true;  </p>    
+          <p>char myInitial = 'L';    </p>               
+          <p>String greeting = "Hello"; </p>   
+          <p>note:you do not have to assign a value right away</p>
 
           <p>case-sensitive </p>
-          <p>use meaningful variable names; convention is camelCase </p>
-
+          <p>use meaningful variable names </p>
+          <p>naming convention is camelCase </p>          
         </aside>
       </section>
 
@@ -295,26 +369,30 @@
         <h2>Variable Type Conversion</h2>
         <p class="fragment">(Also known as Casting)</p>
 
-        <p class="fragment">automatic or implicit - when going bigger type</p>
-        <p class="fragment">manual or explicit - when going to smaller type</p>
-        
+        <p class="fragment">Think of variables as boxes in memory.</p>
+        <p class="fragment">The size of the box depends on the variable type.</p>
+
+        <p class="fragment">Automatic or implicit - when going to a bigger box</p>
+        <p class="fragment">Manual or explicit - when going to a smaller box</p>
+
+        <p class="fragment">Let's have a look at a code example.</p>
+          
 
         <aside class="notes">
-          <p>Type casting is when you assign a value of one primitive data type to another type.</p>
+          <p>Type casting is switching data types, sort of.</p>
+          <p>Again think of variables as boxes; type is size of box</p>
           
-          <p>In Java, there are two types of casting:</p>
+          <p>Automatic - converting from a smaller to a larger box</p>
+          <p>Manual - converting from a larger to a smaller box</p>
+                   
+          <p>float age = 15;  // implicit casting int to float</p>	    
+          <p>int payRate = 11.5;       // will give error</p>
+          <p>int payRate = (int) 11.5; // need explicit casting</p>
+          <p>Note: loss of data above</p>
 
-          <p>Widening Casting (automatically) - converting a smaller type to a larger type size</p>
-          <p>byte -> short -> char -> int -> long -> float -> double</p>
-
-          <p>Narrowing Casting (manually) - converting a larger type to a smaller size type</p>
-          <p>double -> float -> long -> int -> char -> short -> byte</p>
-
-          one use-case of this involves input 
-          most commonly input is of type String 
-          but needs to be converted to say int or float
-          will give example
-
+          <p>This can get confusing, so suggest to think ahead 
+            about what data values to expect and 
+            declare the data types accordingliy</p>
 
         </aside>
       </section>
