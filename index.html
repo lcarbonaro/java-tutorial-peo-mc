@@ -1,196 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Tutorial</title>
+    <style>
+      section.left {
+        text-align: left;
+      }
+      aside.notes {
+        font-size: 12px !important;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Java Tutorial</title>
-  <style>
-    section.left {
-      text-align: left;
-    }
-    aside.notes {
-      font-size: 12px !important;
-    }
-    
-  </style>
-</head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img
+            src="java-logo.png"
+            alt="java logo"
+            style="
+              height: 180px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            "
+          />
 
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section>
-        <a>
-          <img src="java-logo.png" alt="java logo" style="
-                height: 180px;
-                margin: 0 auto 4rem auto;
-                background: transparent;
-              " class="demo-logo" />
-        </a>
-        <h2>Java Tutorial</h2>
-        <p style="margin-top: 100px">
-          Prepared for
-          <a href="https://peo-mc.ca/">PEO Mississauga Chapter</a>
-        </p>
-        <p style="margin-top: 25px">
-          Online High School Coding Challenge 2023
-        </p>
-
-        <aside class="notes">
-          <p>Good evening and welcome to 
-            this Java tutorial in preparation 
-            for the Coding Challenge 
-            organised by Professional Engineers Ontario
-            Mississauga Chapter</p>
-        </aside>
-      </section>
-
-      <section>
-        <h2>Land Acknowledgement</h2>
-
-        <aside class="notes">
-          <p>I want to acknowledge that we all live and work 
-            with gratitude here
-            on the traditonal territory of 
-            the Huron-Wendat,
-            the Haudenosaunee,
-            and the Mississaugas of the Credit First Nation.       
+          <h2>Java Tutorial</h2>
+          <p style="margin-top: 100px">
+            Prepared for
+            <a href="https://peo-mc.ca/">PEO Mississauga Chapter</a>
           </p>
-          
-        </aside>
-      </section>
-
-      <section class="left">
-        <h2>A Quick Introduction</h2>
-
-        <p class="fragment">
-          My name is
-          <a href="https://www.linkedin.com/in/lescarbonaro/">Les Carbonaro</a>.
-        </p>
-        <p class="fragment">
-          I am a software developer, mainly full-stack web application
-          development.
-        </p>
-        <p class="fragment">
-          I also host a beginner-friendly meet-up group called
-          <a href="https://www.meetup.com/mississauga-coding/">Mississauga Coding</a>.
-        </p>
-
-        <aside class="notes">
-          <p>It is mostly about about web development.</p>
-          <p>HTML,CSS,JS that sort of thing.</p>
-        </aside>
-      </section>
-
-      <section>
-        <section class="left">
-          <h2>Pre-requisites</h2>
-          <p class="fragment">
-            Either download and install the
-            <a href="https://www.oracle.com/ca-en/java/technologies/downloads/">JDK</a>
-            and
-            <a href="https://download.jetbrains.com/idea/ideaIC-2023.2.2.exe">a code editor or IDE</a>.
-          </p>
-          <p class="fragment">
-            Or, use one of the many online Java compilers available.
-          </p>
-          <p class="fragment">
-            for example:
-            <a href="https://www.onlinegdb.com/online_java_compiler">OnlineGDB</a>
+          <p style="margin-top: 25px">
+            Online High School Coding Challenge 2023
           </p>
 
           <aside class="notes">
-            <p>a couple of choices...</p>
-            <p>You may either download the Java Development Kit (JDK)</p>
             <p>
-              and then use your favourite code editor or IDE (Integrated
-              Development Environment)
+              Good evening and welcome to this Java tutorial in preparation for
+              the Coding Challenge organised by Professional Engineers Ontario
+              Mississauga Chapter
             </p>
-            <p>OR no-install no-downloads</p>
-            <p>Just use one of the several online Java compilers</p>
-            <p>Will be using onlinegdb for examples</p>
-            <p>And that is defintely good enough for you to follow along</p>
+            <p>
+              I want to acknowledge that we all live and work with gratitude
+              here on the traditonal territory of the Huron-Wendat, the
+              Haudenosaunee, and the Mississaugas of the Credit First Nation.
+            </p>
           </aside>
         </section>
 
         <section class="left">
-          <ul>
-            <li>
-              <a href="https://www.onlinegdb.com/online_java_compiler">OnlineGDB</a>
-            </li>
-            <li>
-              <a href="https://www.codiva.io">Codiva</a>
-            </li>
-            <li>
-              <a href="https://onecompiler.com">OneCompiler</a>
-            </li>
-            <li>
-              <a href="https://qa-mktg.codingrooms.com/compiler/java/">CodingRooms</a>
-            </li>
-            <li>
-              <a href="https://replit.com">ReplIt</a>
-            </li>
-            <li>a number of others ...</li>
-          </ul>
+          <h2>A Quick Introduction</h2>
+
+          <p class="fragment">
+            My name is
+            <a href="https://www.linkedin.com/in/lescarbonaro/">Les Carbonaro</a
+            >.
+          </p>
+          <p class="fragment">
+            I am a software developer, mainly full-stack web application
+            development.
+          </p>
+          <p class="fragment">
+            I also host a beginner-friendly meet-up group called
+            <a href="https://www.meetup.com/mississauga-coding/"
+              >Mississauga Coding</a
+            >.
+          </p>
+
+          <aside class="notes">
+            <p>It is mostly about about web development.</p>
+            <p>HTML,CSS,JS that sort of thing.</p>
+          </aside>
         </section>
-      </section>
 
-      <section class="left">
-        <h2>Why Learn/Use Java?</h2>
-        <ul>
-          <li class="fragment">
-            Versatile both platforms &amp; applications
-          </li>
-          <li class="fragment">Used across several industries</li>
-          <li class="fragment">In high demand</li>
-          <li class="fragment">Excellent community support</li>
-          <li class="fragment">Clearly structured applications</li>
-        </ul>
+        <section>
+          <section class="left">
+            <h2>Pre-requisites</h2>
+            <p class="fragment">
+              Either download and install the
+              <a
+                href="https://www.oracle.com/ca-en/java/technologies/downloads/"
+                >JDK</a
+              >
+              and
+              <a href="https://download.jetbrains.com/idea/ideaIC-2023.2.2.exe"
+                >a code editor or IDE</a
+              >.
+            </p>
+            <p class="fragment">
+              Or, use one of the many online Java compilers available.
+            </p>
+            <p class="fragment">
+              for example:
+              <a href="https://www.onlinegdb.com/online_java_compiler"
+                >OnlineGDB</a
+              >
+            </p>
 
-        <aside class="notes">
-          <p>
-            Works on different platforms (Windows, Mac, Linux, Raspberry Pi,
-            etc.)
-          </p>
-          <p>
-            And for different application types mobile (specially Android
-            apps), desktop, web, games
-          </p>
-          <p>One of the most popular programming languages in the world</p>
-          <p>In demand in the current job market, meaning it pays well</p>
-          <p>Excellent community support (millions of developers)</p>
-          <p>
-            Object-oriented approach gives a clear structure to applications
-          </p>
-        </aside>
-      </section>
+            <aside class="notes">
+              <p>a couple of choices...</p>
+              <p>You may either download the Java Development Kit (JDK)</p>
+              <p>
+                and then use your favourite code editor or IDE (Integrated
+                Development Environment)
+              </p>
+              <p>OR no-install no-downloads</p>
+              <p>Just use one of the several online Java compilers</p>
+              <p>Will be using onlinegdb for examples</p>
+              <p>And that is defintely good enough for you to follow along</p>
+            </aside>
+          </section>
 
-      <section>
-        <h2 data-id="code-title">Basic File Structure</h2>
-      </section>
+          <section class="left">
+            <ul>
+              <li>
+                <a href="https://www.onlinegdb.com/online_java_compiler"
+                  >OnlineGDB</a
+                >
+              </li>
+              <li>
+                <a href="https://www.codiva.io">Codiva</a>
+              </li>
+              <li>
+                <a href="https://onecompiler.com">OneCompiler</a>
+              </li>
+              <li>
+                <a href="https://qa-mktg.codingrooms.com/compiler/java/"
+                  >CodingRooms</a
+                >
+              </li>
+              <li>
+                <a href="https://replit.com">ReplIt</a>
+              </li>
+              <li>a number of others ...</li>
+            </ul>
+          </section>
+        </section>
 
-      <section data-auto-animate>
-        <h2 data-id="code-title">Basic Source File Structure</h2>
-        <pre data-id="code-animation">
+        <section class="left">
+          <h2>Why Learn/Use Java?</h2>
+          <ul>
+            <li class="fragment">
+              Versatile both platforms &amp; applications
+            </li>
+            <li class="fragment">Used across several industries</li>
+            <li class="fragment">In high demand</li>
+            <li class="fragment">Excellent community support</li>
+            <li class="fragment">Clearly structured applications</li>
+          </ul>
+
+          <aside class="notes">
+            <p>
+              Works on different platforms (Windows, Mac, Linux, Raspberry Pi,
+              etc.)
+            </p>
+            <p>
+              And for different application types mobile (specially Android
+              apps), desktop, web, games
+            </p>
+            <p>One of the most popular programming languages in the world</p>
+            <p>In demand in the current job market, meaning it pays well</p>
+            <p>Excellent community support (millions of developers)</p>
+            <p>
+              Object-oriented approach gives a clear structure to applications
+            </p>
+          </aside>
+        </section>
+
+        <section>
+          <h2 data-id="code-title">Basic File Structure</h2>
+        </section>
+
+        <section data-auto-animate>
+          <h2 data-id="code-title">Basic Source File Structure</h2>
+          <pre data-id="code-animation">
               <code class="hljs java" data-trim data-line-numbers>
         
               </code>
             </pre>
-            <aside class="notes">
-              <p>And by file here I mean SOURCE file</p>
-              <p>
-                Java is a compiled language, meaning we write our code in source
-                files
-              </p>
-              <p>which are then compiled by the Java compiler</p>        
+          <aside class="notes">
+            <p>And by file here I mean SOURCE file</p>
+            <p>
+              Java is a compiled language, meaning we write our code in source
+              files
+            </p>
+            <p>which are then compiled by the Java compiler</p>
+          </aside>
+        </section>
 
-            </aside>
-      </section>
-
-      <section data-auto-animate>
-        <h2 data-id="code-title">Basic Source File Structure</h2>
-        <pre data-id="code-animation">
+        <section data-auto-animate>
+          <h2 data-id="code-title">Basic Source File Structure</h2>
+          <pre data-id="code-animation">
               <code class="hljs java" data-trim data-line-numbers>
                 // 1. everything needs to be inside a class
                 public class Main {
@@ -200,21 +204,20 @@
                 }  
               </code>
             </pre>
-            <aside class="notes">
-              <p>And by file here I mean SOURCE file</p>
-              <p>
-                Java is a compiled language, meaning we write our code in source
-                files
-              </p>
-              <p>which are then compiled by the Java compiler</p>
-              <p>rule#1: everything needs to be in a class</p>
+          <aside class="notes">
+            <p>And by file here I mean SOURCE file</p>
+            <p>
+              Java is a compiled language, meaning we write our code in source
+              files
+            </p>
+            <p>which are then compiled by the Java compiler</p>
+            <p>rule#1: everything needs to be in a class</p>
+          </aside>
+        </section>
 
-            </aside>
-      </section>
-
-      <section data-auto-animate>
-        <h2 data-id="code-title">Basic Source File Structure</h2>
-        <pre data-id="code-animation">
+        <section data-auto-animate>
+          <h2 data-id="code-title">Basic Source File Structure</h2>
+          <pre data-id="code-animation">
               <code class="hljs java" data-trim data-line-numbers="4-8">
                 // 1. everything needs to be inside a class
                 public class Main {
@@ -228,15 +231,17 @@
                 }  
               </code>
             </pre>
-            <aside class="notes">
-              <p>rule#2: every class needs at least one method, typically a method called main</p>
+          <aside class="notes">
+            <p>
+              rule#2: every class needs at least one method, typically a method
+              called main
+            </p>
+          </aside>
+        </section>
 
-            </aside>
-      </section>
-
-      <section data-auto-animate>
-        <h2 data-id="code-title">Basic Source File Structure</h2>
-        <pre data-id="code-animation">
+        <section data-auto-animate>
+          <h2 data-id="code-title">Basic Source File Structure</h2>
+          <pre data-id="code-animation">
           <code class="hljs java" data-trim data-line-numbers>
             // 1. everything needs to be inside a class
             public class Main {
@@ -251,20 +256,20 @@
           </code>
         </pre>
 
-        <aside class="notes">
-          <p>general syntax & structure</p>
-          <p>- everything needs to be inside a class</p>
-          <p>- any logic needs to be inside a method</p>
-          <p>- curly brackets at start/end of blocks</p>
-          <p>- each program needs to have a main method to start from</p>
-          <p>- here named the class Main</p>
-          <p>- classname starts uppercase first letter</p>
-        </aside>
-      </section>
+          <aside class="notes">
+            <p>general syntax & structure</p>
+            <p>- everything needs to be inside a class</p>
+            <p>- any logic needs to be inside a method</p>
+            <p>- curly brackets at start/end of blocks</p>
+            <p>- each program needs to have a main method to start from</p>
+            <p>- here named the class Main</p>
+            <p>- classname starts uppercase first letter</p>
+          </aside>
+        </section>
 
-      <section data-auto-animate>
-        <h2 data-id="code-title">Basic Source File Structure</h2>
-        <pre data-id="code-animation">
+        <section data-auto-animate>
+          <h2 data-id="code-title">Basic Source File Structure</h2>
+          <pre data-id="code-animation">
               <code class="hljs java" data-trim data-line-numbers>
                 // 1. everything needs to be inside a class
                 public class Main {
@@ -288,14 +293,14 @@
               </code>
             </pre>
 
-        <aside class="notes">
-          <p>type in code example</p>
-        </aside>
-      </section>
+          <aside class="notes">
+            <p>type in code example</p>
+          </aside>
+        </section>
 
-      <section class="left">
-        <h2>Outputs</h2>
-        <pre data-id="code-animation">
+        <section class="left">
+          <h2>Outputs</h2>
+          <pre data-id="code-animation">
           <code class="hljs java" data-trim data-line-numbers>
             // 1. everything needs to be inside a class
             public class Main {
@@ -316,251 +321,216 @@
           </code>
         </pre>
 
+          <aside class="notes">
+            <p style="font-size: 16px">System meaning the computer</p>
+            <p style="font-size: 16px">out because it's output</p>
+            <p style="font-size: 16px">println meaning print line</p>
+            <p style="font-size: 16px">note: semicolon at end of line</p>
+            <p style="font-size: 16px">type in examples</p>
+            <p style="font-size: 16px">- print a string hello world</p>
+            <p style="font-size: 16px">- print a number</p>
+            <p style="font-size: 16px">
+              - print a combo string + number (concat)
+            </p>
+            <p style="font-size: 16px">
+              note use of comments to explain, clarify etc
+            </p>
+            <p style="font-size: 16px">- // for single line comments</p>
+            <p style="font-size: 16px">- /* */ for multi line comments</p>
+          </aside>
+        </section>
 
-        <aside class="notes">
-          <p style="font-size:16px;">System meaning the computer</p> 
-          <p style="font-size:16px;">out because it's output </p>
-          <p style="font-size:16px;">println meaning print line</p>
-          <p style="font-size:16px;">note: semicolon at end of line</p>
-          <p style="font-size:16px;">type in examples</p>
-          <p style="font-size:16px;"> - print a string hello world</p>
-          <p style="font-size:16px;"> - print a number</p>
-          <p style="font-size:16px;"> - print a combo string + number (concat)</p>
-          <p style="font-size:16px;">note use of comments to explain, clarify etc</p>
-          <p style="font-size:16px;">   - // for single line comments</p>
-          <p style="font-size:16px;">   - /* */ for multi line comments</p>
-        </aside>
-      </section>
+        <section class="left">
+          <h2>Some Variable Types</h2>
+          <p class="fragment">(The most commonly used)</p>
 
-      <section class="left">
-        <h2>Some Variable Types</h2>
-        <p class="fragment">(The most commonly used)</p>
+          <ul class="fragment">
+            <li>int</li>
+            <li>float</li>
+            <li>double</li>
+            <li>boolean</li>
+            <li>char</li>
+            <li>String</li>
+          </ul>
 
-        <ul class="fragment">
-          <li>int</li>
-          <li>float</li>
-          <li>double</li>
-          <li>boolean</li>
-          <li>char</li>
-          <li>String</li>          
-        </ul>
+          <aside class="notes">
+            <p>a variable is a value stored in memory</p>
+            <p>so far we printed literal strings and numbers</p>
+            <p>but many times we need to store values in variables</p>
+            <p>maybe to process or manipulate them in some way before output</p>
+            <p>note: Java is a strongly typed language</p>
+            <p>
+              meaning we must declare ahead of time what type of value we need
+              to store in that variable
+            </p>
+          </aside>
+        </section>
 
-        <aside class="notes">
-          <p>a variable is a value stored in memory</p>
-          <p>so far we printed literal strings and numbers </p>
-          <p>but many times we need to store values in variables</p>
-          <p>maybe to process or manipulate them in some way before output</p>
-          <p>note: Java is a strongly typed language</p>
-          <p>meaning we must declare ahead of time what type 
-            of value we need to store in that variable</p>
-        </aside>
-      </section>
+        <section class="left">
+          <h2>Some Variable Types</h2>
+          <p>(The most commonly used)</p>
 
-      <section class="left">
-        <h2>Some Variable Types</h2>
-        <p >(The most commonly used)</p>
+          <ul>
+            <li>int</li>
+            <li>float</li>
+            <li>double</li>
+            <li>boolean</li>
+            <li>char</li>
+            <li>String</li>
+          </ul>
 
-        <ul>
-          <li>int</li>
-          <li>float</li>
-          <li>double</li>
-          <li>boolean</li>
-          <li>char</li>
-          <li>String</li>          
-        </ul>
+          <p>Let's see some code examples...</p>
 
-        <p>Let's see some code examples...</p>
+          <aside class="notes">
+            <p>int qty = 5;</p>
+            <p>float price = 5.99f;</p>
+            <p>double exchangeRate = 15.754d;</p>
+            <p>boolean isMember = true;</p>
+            <p>char myInitial = 'L';</p>
+            <p>String greeting = "Hello";</p>
+            <p>note:you do not have to assign a value right away</p>
 
-        <aside class="notes">
-          <p>int qty = 5;</p>          
-          <p>float price = 5.99f;  </p>
-          <p>double exchangeRate = 15.754d;   </p>
-          <p>boolean isMember = true;  </p>    
-          <p>char myInitial = 'L';    </p>               
-          <p>String greeting = "Hello"; </p>   
-          <p>note:you do not have to assign a value right away</p>
+            <p>case-sensitive</p>
+            <p>use meaningful variable names</p>
+            <p>naming convention is camelCase</p>
+          </aside>
+        </section>
 
-          <p>case-sensitive </p>
-          <p>use meaningful variable names </p>
-          <p>naming convention is camelCase </p>          
-        </aside>
-      </section>
+        <section class="left">
+          <h2>Variable Type Conversion</h2>
+          <p class="fragment">(Also known as Casting)</p>
 
-      <section class="left">
-        <h2>Variable Type Conversion</h2>
-        <p class="fragment">(Also known as Casting)</p>
+          <p class="fragment">Think of variables as boxes in memory.</p>
+          <p class="fragment">
+            The size of the box depends on the variable type.
+          </p>
 
-        <p class="fragment">Think of variables as boxes in memory.</p>
-        <p class="fragment">The size of the box depends on the variable type.</p>
+          <p class="fragment">
+            Automatic or implicit - when going to a bigger box
+          </p>
+          <p class="fragment">
+            Manual or explicit - when going to a smaller box
+          </p>
 
-        <p class="fragment">Automatic or implicit - when going to a bigger box</p>
-        <p class="fragment">Manual or explicit - when going to a smaller box</p>
+          <p class="fragment">Let's have a look at a code example.</p>
 
-        <p class="fragment">Let's have a look at a code example.</p>
-          
+          <aside class="notes">
+            <p>Type casting is switching data types, sort of.</p>
+            <p>Again think of variables as boxes; type is size of box</p>
 
-        <aside class="notes">
-          <p>Type casting is switching data types, sort of.</p>
-          <p>Again think of variables as boxes; type is size of box</p>
-          
-          <p>Automatic - converting from a smaller to a larger box</p>
-          <p>Manual - converting from a larger to a smaller box</p>
-                   
-          <p>float age = 15;  // implicit casting int to float</p>	    
-          <p>int payRate = 11.5;       // will give error</p>
-          <p>int payRate = (int) 11.5; // need explicit casting</p>
-          <p>Note: loss of data above</p>
+            <p>Automatic - converting from a smaller to a larger box</p>
+            <p>Manual - converting from a larger to a smaller box</p>
 
-          <p>This can get confusing, so suggest to think ahead 
-            about what data values to expect and 
-            declare the data types accordingliy</p>
+            <p>float age = 15; // implicit casting int to float</p>
+            <p>int payRate = 11.5; // will give error</p>
+            <p>int payRate = (int) 11.5; // need explicit casting</p>
+            <p>Note: loss of data above</p>
 
-        </aside>
-      </section>
+            <p>
+              This can get confusing, so suggest to think ahead about what data
+              values to expect and declare the data types accordingliy
+            </p>
+          </aside>
+        </section>
 
-      <section class="left">
-        <h2>Inputs</h2>
-        <p class="fragment"></p>
+        <section class="left">
+          <h2>Inputs</h2>
+          <p class="fragment"></p>
 
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
+          <aside class="notes">slide notes</aside>
+        </section>
 
-      <section class="left">
-        <h2>Arithmetic Operators</h2>
-        <p class="fragment"></p>
+        <section class="left">
+          <h2>Arithmetic Operators</h2>
+          <p class="fragment"></p>
 
-        
+          <aside class="notes">slide notes</aside>
+        </section>
 
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
+        <section class="left">
+          <h2>Assignment Operators</h2>
+          <p class="fragment"></p>
 
-      <section class="left">
-        <h2>Assignment Operators</h2>
-        <p class="fragment"></p>
+          <aside class="notes">slide notes</aside>
+        </section>
 
-        
+        <section class="left">
+          <h2>Comparison Operators</h2>
+          <p class="fragment"></p>
 
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
+          <aside class="notes">slide notes</aside>
+        </section>
 
-      <section class="left">
-        <h2>Comparison Operators</h2>
-        <p class="fragment"></p>
+        <section class="left">
+          <h2>Conditional Statements</h2>
+          <p class="fragment"></p>
 
-        
+          <aside class="notes">slide notes</aside>
+        </section>
 
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
+        <section class="left">
+          <h2>Loop Statements</h2>
+          <p class="fragment"></p>
 
+          <aside class="notes">slide notes</aside>
+        </section>
 
-      <section class="left">
-        <h2>Conditional Statements</h2>
-        <p class="fragment"></p>
+        <section class="left">
+          <h2>Arrays & ArrayLists</h2>
+          <p class="fragment"></p>
 
-        
+          <aside class="notes">
+            slide notes In Java, an array is a fixed-size collection of elements
+            of the same type. It is a basic data structure with a contiguous
+            block of memory allocated to store its elements. On the other hand,
+            an ArrayList is a dynamic, resizable implementation of the List
+            interface. It is part of the Java Collections Framework and provides
+            more flexibility compared to arrays. Here are some key differences
+            between arrays and ArrayList: Size: Arrays have a fixed size that is
+            determined at the time of declaration. Once an array is created, its
+            size cannot be changed. On the other hand, an ArrayList can grow and
+            shrink dynamically as elements are added or removed. Type: Arrays
+            can store elements of any type (primitive or object). However,
+            ArrayList can only store object references, meaning it can store
+            objects of any type but not primitive types directly. For primitive
+            types, you have to use their corresponding object wrapper classes
+            (e.g., Integer, Character) as ArrayList elements. Arrays are
+            generally suitable for situations where the size is known in advance
+            and doesn't change frequently. ArrayLists are more convenient for
+            scenarios where the size is variable and requires frequent
+            modifications.
+          </aside>
+        </section>
 
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
+        <section class="left">
+          <h2>Functions & Methods</h2>
+          <p class="fragment"></p>
 
+          <aside class="notes">slide notes</aside>
+        </section>
 
-      <section class="left">
-        <h2>Loop Statements</h2>
-        <p class="fragment"></p>       
+        <section class="left">
+          <h2>Object-Oriented Programming</h2>
+          <p class="fragment"></p>
 
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
+          <aside class="notes">slide notes</aside>
+        </section>
 
+        <section class="left">
+          <h2>Where To Find more</h2>
+          <p class="fragment">links to docs, other tutorials</p>
 
-      <section class="left">
-        <h2>Arrays & ArrayLists</h2>
-        <p class="fragment"></p>        
+          <aside class="notes">slide notes</aside>
+        </section>
 
-        <aside class="notes">
-          slide notes
-          In Java, an array is a fixed-size collection of elements of the same type. 
-          It is a basic data structure with a contiguous block of memory allocated to 
-          store its elements.
-          On the other hand, an ArrayList is a dynamic, resizable implementation 
-          of the List interface. 
-          It is part of the Java Collections Framework and provides more flexibility 
-          compared to arrays.
-          Here are some key differences between arrays and ArrayList:
-          Size: Arrays have a fixed size that is determined at the time of declaration. 
-          Once an array is created, its size cannot be changed. 
-          On the other hand, an ArrayList can grow and shrink dynamically as elements 
-          are added or removed.
+        <section class="left">
+          <h2>Thank You</h2>
+          <p class="fragment">Q &amp; A</p>
 
-          Type: Arrays can store elements of any type (primitive or object). 
-          However, ArrayList can only store object references, meaning it can store 
-          objects of any type but not primitive types directly. For primitive types, 
-          you have to use their corresponding object wrapper 
-          classes (e.g., Integer, Character) as ArrayList elements.
+          <aside class="notes">slide notes</aside>
+        </section>
 
-          Arrays are generally suitable for situations where the size is known in 
-          advance and doesn't change frequently. 
-          ArrayLists are more convenient for scenarios where the size is variable 
-          and requires frequent modifications.
-        </aside>
-      </section>
-
-      <section class="left">
-        <h2>Functions & Methods</h2>
-        <p class="fragment"></p>
-
-        
-
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
-
-      <section class="left">
-        <h2>Object-Oriented Programming</h2>
-        <p class="fragment"></p>
-
-        
-
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
-      
-
-      <section class="left">
-        <h2>Where To Find more</h2>
-        <p class="fragment">links to docs, other tutorials</p>
-
-        
-
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
-
-      <section class="left">
-        <h2>Thank You</h2>
-        <p class="fragment">Q &amp; A</p>
-
-        
-
-        <aside class="notes">
-          slide notes
-        </aside>
-      </section>
-
-      <!--
+        <!--
 
         <section class="left">
           <h2>Arithmetic Operators</h2>
@@ -579,11 +549,10 @@
           <p class="fragment">gfkgdfjgklfdjgkflgjdlkf</p>
         </section>
         -->
-
-      
-    </div> <!-- div.slides -->
-  </div>  <!-- div.reveal -->
-  <script type="module" src="/main.js"></script>
-</body>
-
+      </div>
+      <!-- div.slides -->
+    </div>
+    <!-- div.reveal -->
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
