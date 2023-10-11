@@ -45,9 +45,12 @@
               Mississauga Chapter
             </p>
             <p>
-              I want to acknowledge that we all live and work with gratitude
-              here on the traditional territory of the Huron-Wendat, the
-              Haudenosaunee, and the Mississaugas of the Credit First Nation.
+              I want to acknowledge that we are
+              on traditional territory of 
+              the Huron-Wendat and 
+              the Haudenosaunee 
+              indigenous peoples and 
+              the Mississaugas of the Credit First Nation.
             </p>
           </aside>
         </section>
@@ -435,9 +438,35 @@
 
         <section class="left">
           <h2>Inputs</h2>
-          <p class="fragment"></p>
+           <pre data-id="code-animation">
+          <code class="hljs java" data-trim data-line-numbers="1|7-10|12">
+            import java.util.Scanner;
+            public class Main {
 
-          <aside class="notes">slide notes</aside>
+              
+              public static void main(String[] args) {
+
+                Scanner scan = new Scanner(System.in);
+
+                System.out.println("What is your name:");
+                String name = scan.nextLine();
+              
+                System.out.println("Hello " + name);
+
+              }
+
+            }  
+          </code>
+        </pre>
+
+          <aside class="notes">
+            <p class="fragment">
+              programs need input
+              one common way via user prompts
+              Java has built-in classes
+              one of which is theh Scanner class
+            </p>
+          </aside>
         </section>
 
         <section class="left">
