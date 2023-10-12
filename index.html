@@ -12,6 +12,51 @@
       aside.notes {
         font-size: 12px !important;
       }
+      /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+      .flip-card {
+        background-color: transparent;
+        border: 2px solid #f00;
+        height:100%;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1.5s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue !important;
+        color: white;
+        transform: rotateY(180deg);
+      }
     </style>
   </head>
 
@@ -45,12 +90,9 @@
               Mississauga Chapter
             </p>
             <p>
-              I want to acknowledge that we are
-              on traditional territory of 
-              the Huron-Wendat and 
-              the Haudenosaunee 
-              indigenous peoples and 
-              the Mississaugas of the Credit First Nation.
+              I want to acknowledge that we are on traditional territory of the
+              Huron-Wendat and the Haudenosaunee indigenous peoples and the
+              Mississaugas of the Credit First Nation.
             </p>
           </aside>
         </section>
@@ -162,16 +204,36 @@
               etc.)
             </p>
             <p>
-              And for different application types mobile (specially Android
-              apps), desktop, web, games
+              And for different application types mobile apps (Android apps and
+              Android OS), desktop, web (both front- and back-end), gaming, even
+              on space missions usch as Mars Rovers.
             </p>
             <p>One of the most popular programming languages in the world</p>
             <p>In demand in the current job market, meaning it pays well</p>
             <p>Excellent community support (millions of developers)</p>
             <p>
-              Object-oriented approach gives a clear structure to applications
+              Object-oriented approach gives a clear structure to applications,
+              forces you to write modular, reusable code.
             </p>
           </aside>
+        </section>
+
+        <section>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="java-logo.png" alt="java-logo" />
+                <h1>Java Fun Fact</h1>
+                <p>Who invented Java?</p>
+              </div>
+              <div class="flip-card-back">
+                <h1>James Gosling</h1>
+                <p>Started developing Java in 1991</p>
+                <p>while working for Sun Microsystems</p>
+                <img src="java-logo.png" alt="java-logo" />
+              </div>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -441,28 +503,24 @@
           <p class="fragment">Programs typically need input(s).</p>
           <p class="fragment">One way is to prompt user to enter a value.</p>
           <p class="fragment">Java has built-in methods for this purpose.</p>
-          
+
           <aside class="notes">
             <p>
-              We spoke about output.
-              Programs need input.
-              One common way is to prompt user and wait for the input &amp; ENTER.
-              Java has built-in classes
-              one of which is the Scanner class
+              We spoke about output. Programs need input. One common way is to
+              prompt user and wait for the input &amp; ENTER. Java has built-in
+              classes one of which is the Scanner class
             </p>
             <p>
-              Java has built-in classes.
-              One of which is the Scanner class
-              which we can use for input.
+              Java has built-in classes. One of which is the Scanner class which
+              we can use for input.
             </p>
             <p>Go through example code on slide</p>
-            
           </aside>
         </section>
 
-        <section  data-auto-animate>
+        <section data-auto-animate>
           <h2>Inputs</h2>
-           <pre data-id="code-animation">
+          <pre data-id="code-animation">
           <code class="hljs java" data-trim data-line-numbers="1|6|8-9|11|1-15">
             import java.util.Scanner;
             public class Main {
@@ -483,7 +541,7 @@
         </pre>
 
           <aside class="notes">
-            <p>Walk through code</p>            
+            <p>Walk through code</p>
             <p>Then type in an example</p>
           </aside>
         </section>
