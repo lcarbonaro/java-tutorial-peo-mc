@@ -11,58 +11,12 @@
       }
       aside.notes {
         font-size: 12px !important;
+      }     
+      p.slide-code {
+        font-family: "Courier New";
+        font-size: larger;
+        color: peru;
       }
-      /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-      .flip-card {
-        background-color: transparent;
-        border: 2px solid #f00;
-        height:100%;
-        perspective: 1000px; /* Remove this if you don't want the 3D effect */
-      }
-
-      /* This container is needed to position the front and back side */
-      .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 1.5s;
-        transform-style: preserve-3d;
-      }
-
-      /* Do an horizontal flip when you move the mouse over the flip box container */
-      .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-
-      /* Position the front and back side */
-      .flip-card-front,
-      .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden; /* Safari */
-        backface-visibility: hidden;
-      }
-
-      /* Style the front side (fallback if image is missing) */
-      .flip-card-front {
-        background-color: #bbb;
-        color: black;
-      }
-
-      /* Style the back side */
-      .flip-card-back {
-        background-color: dodgerblue !important;
-        color: white;
-        transform: rotateY(180deg);
-      }
-
-     .slide-code {
-      font-family: 'Courier New'; 
-      font-size: larger;  
-      color:peru;
-     }
     </style>
   </head>
 
@@ -97,7 +51,7 @@
             </p>
             <p>
               I want to acknowledge that we are on traditional territory of the
-              Huron-Wendat and the Haudenosaunee indigenous peoples and the
+              Huron-Wendat and Haudenosaunee indigenous peoples, and the
               Mississaugas of the Credit First Nation.
             </p>
           </aside>
@@ -124,7 +78,8 @@
 
           <aside class="notes">
             <p>It is mostly about about web development.</p>
-            <p>HTML,CSS,JS that sort of thing.</p>
+            <p>HTML, CSS, JS that sort of thing.</p>
+            <p>So feel free to check us out on meetup.com and drop in for our online sessions.</p>
           </aside>
         </section>
 
@@ -196,7 +151,7 @@
           <h2>Why Learn/Use Java?</h2>
           <ul>
             <li class="fragment">
-              Versatile both platforms &amp; applications
+              Versatile &amp; portable across both platforms &amp; applications
             </li>
             <li class="fragment">Used across several industries</li>
             <li class="fragment">In high demand</li>
@@ -207,12 +162,12 @@
           <aside class="notes">
             <p>
               Works on different platforms (Windows, Mac, Linux, Raspberry Pi,
-              etc.)
+              etc.) Code itself is portable; Write Once Run Anywhere
             </p>
             <p>
               And for different application types mobile apps (Android apps and
               Android OS), desktop, web (both front- and back-end), gaming, even
-              on space missions usch as Mars Rovers.
+              on space missions such as Mars Rovers.
             </p>
             <p>One of the most popular programming languages in the world</p>
             <p>In demand in the current job market, meaning it pays well</p>
@@ -225,31 +180,20 @@
         </section>
 
         <section>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="java-logo.png" alt="java-logo" />
-                <h1>Java Fun Fact</h1>
-                <p>Who invented Java?</p>
-              </div>
-              <div class="flip-card-back">
-                <h1>James Gosling</h1>
-                <p>Started developing Java in 1991</p>
-                <p>while working for Sun Microsystems</p>
-                <img src="java-logo.png" alt="java-logo" />
-              </div> 
-            </div>
-          </div>
+          <img src="java-fun-fact.png" alt="java-fun-fact" />
+          <p class="fragment fade-up">Who invented Java?</p>
+          <p class="fragment fade-left">
+            James Gosling started developing Java in 1991 while working for Sun
+            Microsystems.
+          </p>
+
+          <aside class="notes">
+            <p>
+              And while Sun was an American company based in California, James
+              is a Canadian computer scientist from Calgary, Alberta.
+            </p>
+          </aside>
         </section>
-
-        <!-- What was Java originally called? 
-             Java was originally called Oak, for the oak tree 
-             outside James Gosling's office window -->
-
-        <!-- What year was Java launched?
-          Java 1.0 came out in 1996.
-          The current version is Java 21.
-         -->
 
         <section>
           <h2 data-id="code-title">Basic File Structure</h2>
@@ -563,66 +507,76 @@
 
         <section class="left">
           <h2>Operators</h2>
-              <p class="fragment" data-fragment-index="1">
-                Arithmetic
-              </p>
-              <p class="fragment fade-left slide-code" data-fragment-index="3"  > 
-                + - * / % ++ -- 
-              </p>
-                    
-              <p class="fragment" data-fragment-index="2" >Assignment</p>
-              <p class="fragment fade-left slide-code" data-fragment-index="4" > 
-                = += -= 
-              </p>
+          <p class="fragment" data-fragment-index="1">Arithmetic</p>
+          <p class="fragment fade-left slide-code" data-fragment-index="3">
+            + - * / % ++ --
+          </p>
 
-              <p class="fragment" data-fragment-index="5" >Some examples...</p>
-              
-        
+          <p class="fragment" data-fragment-index="2">Assignment</p>
+          <p class="fragment fade-left slide-code" data-fragment-index="4">
+            = += -=
+          </p>
+
+          <p class="fragment" data-fragment-index="5">Some examples...</p>
+
           <aside class="notes">
             <p>Go through types in order.</p>
             <p>Give examples of most commonly used in each type.</p>
-            <br>
+            <br />
             <p>Note: Order of operations BODMAS / PEDMAS</p>
           </aside>
         </section>
 
         <section class="left">
-          <h2>More Operators</h2>                     
-              <p class="fragment" data-fragment-index="1" >Comparison</p>
-              <p class="fragment slide-code" data-fragment-index="3" > 
-                == &lt; &lt;= &gt; &gt;= != 
-              </p>
-            
-              <p class="fragment" data-fragment-index="2" >Logical</p>
-              <p class="fragment slide-code" data-fragment-index="4" > 
-                &amp;&amp; || 
-              </p>
+          <h2>More Operators</h2>
+          <p class="fragment" data-fragment-index="1">Comparison</p>
+          <p class="fragment slide-code" data-fragment-index="3">
+            == &lt; &lt;= &gt; &gt;= !=
+          </p>
 
-              <p class="fragment" data-fragment-index="5" >Some examples...</p>
-         
+          <p class="fragment" data-fragment-index="2">Logical</p>
+          <p class="fragment slide-code" data-fragment-index="4">
+            &amp;&amp; ||
+          </p>
+
+          <p class="fragment" data-fragment-index="5">Some examples...</p>
 
           <aside class="notes">
             <p>Go through types in order.</p>
             <p>Give examples of most commonly used in each type.</p>
-            
           </aside>
         </section>
 
-        
+        <section>
+          <img src="java-fun-fact.png" alt="java-fun-fact" />
+          <p class="fragment fade-up">What was Java called originally?</p>
+          <p class="fragment fade-left">
+            Java was originally called Oak, after a tall oak tree outside James
+            Gosling's office window.
+          </p>
+
+          <aside class="notes">
+            <p>
+              It was later dicovered that a company called Oak Technologies
+              already had rights to that name, and so James and his team at Sun
+              had to come up with another name.
+            </p>
+          </aside>
+        </section>
 
         <section class="left">
           <h2>Conditional Statements</h2>
           <p class="fragment">
-            If something is true then do this otherwise do that
+            If something is true then do this, otherwise do that
           </p>
-          <p class="fragment slide-code">
-            if ... then ... else ...
-          </p>
-          <p class="fragment">Some examples...</p>  
+          <p class="fragment slide-code">if ... then ... else ...</p>
+          <p class="fragment">Some examples...</p>
 
           <aside class="notes">
-            <p>These comparison and logical operators come in 
-              especially handy in conditonal statements.</p>
+            <p>
+              These comparison and logical operators come in especially handy in
+              conditonal statements.
+            </p>
           </aside>
         </section>
 
@@ -665,6 +619,18 @@
           <p class="fragment"></p>
 
           <aside class="notes">slide notes</aside>
+        </section>
+
+        <section>
+          <img src="java-fun-fact.png" alt="java-fun-fact" />
+          <p class="fragment fade-up">What year was Java launched?</p>
+          <p class="fragment fade-left">
+            Java 1.0 came out in 1996.
+          </p>
+
+          <aside class="notes">
+            <p>And currently Java is at version number 21.</p>
+          </aside>
         </section>
 
         <section class="left">
