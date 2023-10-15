@@ -236,7 +236,7 @@
               Java is a compiled language, meaning we write our code in source
               files
             </p>
-            <p>which are then compiled by the Java compiler</p>
+            <p>which are then compiled into byte-code by the Java compiler</p>
             <p>rule#1: everything needs to be in a class</p>
           </aside>
         </section>
@@ -463,10 +463,10 @@
           <aside class="notes">
             <p>We spoke about output.</p>
             <p>Programs typically also need input.</p>
-            <p>One common way to fetch input values into our programs
+            <p>One common way to fetch input values into our program
               is to prompt user for the input</p>
             <p>
-              Java has several built-in classes. One of which is the Scanner class which
+              Java has several built-in classes. One of those is the Scanner class which
               we can use for input.
             </p>
             <p>Let me show you what I mean.</p>
@@ -538,11 +538,11 @@
             &amp;&amp; ||
           </p>
 
-          <p class="fragment" data-fragment-index="5">Some examples...</p>
+          <p class="fragment" data-fragment-index="5">How? When?</p>
 
           <aside class="notes">
             <p>Go through types in order.</p>
-            <p>Will see some examples of these last two shortly.</p>
+            <p>Next we will see usages of these last two operator types.</p>
           </aside>
         </section>
         
@@ -551,8 +551,16 @@
           <p class="fragment">
             If something is true then do this, otherwise do that
           </p>
-          <p class="fragment slide-code">if ... then ... else ...</p>
-          <p class="fragment">Lat's have a look.</p>
+          <pre class="fragment" data-id="code-animation">
+            <code class="hljs java" data-trim data-line-numbers>
+              if( some condition is true  ) {  // if block
+                // do something
+              } else {  // else block
+                // do some other thing
+              }             
+            </code>
+          </pre>
+          <p class="fragment">Let's see an example in action.</p>
 
           <aside class="notes">
             <p>
