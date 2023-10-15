@@ -46,7 +46,7 @@
           <aside class="notes">
             <p>
               Good evening and welcome to this Java tutorial in preparation for
-              the Coding Challenge organised by Professional Engineers Ontario
+              the Coding Challenge organised by<br> Professional Engineers Ontario,<br>
               Mississauga Chapter
             </p>
             <p>
@@ -114,7 +114,7 @@
                 and then use your favourite code editor or IDE (Integrated
                 Development Environment)
               </p>
-              <p>OR no-install no-downloads</p>
+              <p>OR the zero-downloads zero-installs option </p>
               <p>Just use one of the several online Java compilers</p>
               <p>Will be using onlinegdb for examples</p>
               <p>And that is defintely good enough for you to follow along</p>
@@ -189,14 +189,17 @@
 
           <aside class="notes">
             <p>
-              And while Sun was an American company based in California, James
-              is a Canadian computer scientist from Calgary, Alberta.
+              And while Sun was an American company based in California, Mr Gosling
+              is a Canadian computer scientist orginally from Calgary, Alberta.
             </p>
           </aside>
         </section>
 
         <section>
           <h2 data-id="code-title">Basic File Structure</h2>
+          <aside class="notes">
+            <p>Basic syntax and file structure</p>
+          </aside>
         </section>
 
         <section data-auto-animate>
@@ -212,7 +215,7 @@
               Java is a compiled language, meaning we write our code in source
               files
             </p>
-            <p>which are then compiled by the Java compiler</p>
+            <p>which are then compiled into byte-code by the Java compiler</p>
           </aside>
         </section>
 
@@ -258,7 +261,7 @@
           <aside class="notes">
             <p>
               rule#2: every class needs at least one method, typically a method
-              called main
+              called main which provides an entry-point for our program
             </p>
           </aside>
         </section>
@@ -287,7 +290,8 @@
             <p>- curly brackets at start/end of blocks</p>
             <p>- each program needs to have a main method to start from</p>
             <p>- here named the class Main</p>
-            <p>- classname starts uppercase first letter</p>
+            <p>- classname starts with an uppercase first letter</p>
+            <p>- class filename must match class name</p>
           </aside>
         </section>
 
@@ -378,13 +382,13 @@
           </ul>
 
           <aside class="notes">
-            <p>a variable is a value stored in memory</p>
+            <p>a variable is a value stored in memory and given a label</p>
             <p>so far we printed literal strings and numbers</p>
             <p>but many times we need to store values in variables</p>
             <p>maybe to process or manipulate them in some way before output</p>
             <p>note: Java is a strongly typed language</p>
             <p>
-              meaning we must declare ahead of time what type of value we need
+              meaning we must declare ahead of time what type of value we intend
               to store in that variable
             </p>
           </aside>
@@ -408,7 +412,7 @@
           <aside class="notes">
             <p>int qty = 5;</p>
             <p>float price = 5.99f;</p>
-            <p>double exchangeRate = 15.754d;</p>
+            <p>double usdExchangeRate = 0.731794d;</p>
             <p>boolean isMember = true;</p>
             <p>char myInitial = 'L';</p>
             <p>String greeting = "Hello";</p>
@@ -440,7 +444,7 @@
 
           <aside class="notes">
             <p>Type casting is switching data types, sort of.</p>
-            <p>Again think of variables as boxes; type is size of box</p>
+            <p>Thinking of variables as boxes, type is size of box</p>
 
             <p>Automatic - converting from a smaller to a larger box</p>
             <p>Manual - converting from a larger to a smaller box</p>
@@ -451,8 +455,8 @@
             <p>Note: loss of data above</p>
 
             <p>
-              This can get confusing, so suggest to think ahead about what data
-              values to expect and declare the data types accordingliy
+              This can get confusing, so suggest think ahead about what data
+              values to expect &amp; declare right data types accordingly
             </p>
           </aside>
         </section>
@@ -464,16 +468,16 @@
           <p class="fragment">Java has built-in methods for this purpose.</p>
 
           <aside class="notes">
+            <p>We spoke about output.</p>
+            <p>Programs typically also need input.</p>
+            <p>One common way to fetch input values into our programs
+              is to prompt user for the input</p>
             <p>
-              We spoke about output. Programs need input. One common way is to
-              prompt user and wait for the input &amp; ENTER. Java has built-in
-              classes one of which is the Scanner class
-            </p>
-            <p>
-              Java has built-in classes. One of which is the Scanner class which
+              Java has several built-in classes. One of which is the Scanner class which
               we can use for input.
             </p>
-            <p>Go through example code on slide</p>
+            <p>Let me show you what I mean.</p>
+            
           </aside>
         </section>
 
@@ -517,13 +521,15 @@
             = += -=
           </p>
 
-          <p class="fragment" data-fragment-index="5">Some examples...</p>
+          <p class="fragment" data-fragment-index="5">
+            Let's see some examples.
+          </p>
 
           <aside class="notes">
             <p>Go through types in order.</p>
             <p>Give examples of most commonly used in each type.</p>
             <br />
-            <p>Note: Order of operations BODMAS / PEDMAS</p>
+            <p>Note: Order of arithmetic operations: BODMAS / PEDMAS</p>
           </aside>
         </section>
 
@@ -539,7 +545,9 @@
             &amp;&amp; ||
           </p>
 
-          <p class="fragment" data-fragment-index="5">Some examples...</p>
+          <p class="fragment" data-fragment-index="5">
+            Let's have a look at some examples.
+          </p>
 
           <aside class="notes">
             <p>Go through types in order.</p>
@@ -557,7 +565,7 @@
 
           <aside class="notes">
             <p>
-              It was later dicovered that a company called Oak Technologies
+              It was soon dicovered that another company, called Oak Technologies,
               already had rights to that name, and so James and his team at Sun
               had to come up with another name.
             </p>
@@ -569,14 +577,16 @@
           <p class="fragment">
             If something is true then do this, otherwise do that
           </p>
-          <p class="fragment slide-code">if ... then ... else ...</p>
-          <p class="fragment">Some examples...</p>
+          <p class="fragment slide-code">if( condition ) { ... } else { ... }</p>
+          
 
           <aside class="notes">
             <p>
               These comparison and logical operators come in especially handy in
               conditonal statements.
             </p>
+            <p>Give some basic examples.</p>
+            <p>Possibly mention ternary operator?</p>
           </aside>
         </section>
 
