@@ -17,7 +17,7 @@
         font-size: larger;
         color: peru;
       }
-      .speaker-controls-notes .value  {
+      .speaker-controls-notes .value {
         font-size: 10px !important;
         font-family: "Courier New" !important;
       }
@@ -384,8 +384,6 @@
             <li>String</li>
           </ul>
 
-          
-
           <aside class="notes">
             <p>a variable is a value stored in memory and given a label</p>
             <p>so far we printed literal strings and numbers</p>
@@ -429,7 +427,7 @@
             <p>naming convention is camelCase</p>
           </aside>
         </section>
-<!--
+        <!--
         <section class="left">
           <h2>Variable Type Conversion</h2>
           <p class="fragment">(Also known as Casting)</p>
@@ -512,22 +510,22 @@
         </pre>
 
           <aside class="notes">
-            <p>Walk through code, then example</p>            
-<small>
-            <p>import java.util.Scanner;                                 </p>
-            <p>public class Main {</p>
-            <p>  public static void main(String[] args) {</p>
-            <p>    String name;</p>
-            <p>    int age;</p>
-            <p>    Scanner input = new Scanner(System.in);</p>
-            <p>    System.out.println("What is your name?");</p>
-            <p>    name = input.nextLine();</p>
-            <p>    System.out.println("How old are you " + name + "?");</p>
-            <p>    age = input.nextInt();</p>
-            <p>    System.out.println("Name:" + name + " Age:" + age );</p>
-            <p>  }</p>
-            <p>}  </p>
-          </small>
+            <p>Walk through code, then example</p>
+            <small>
+              <p>import java.util.Scanner;</p>
+              <p>public class Main {</p>
+              <p>public static void main(String[] args) {</p>
+              <p>String name;</p>
+              <p>int age;</p>
+              <p>Scanner input = new Scanner(System.in);</p>
+              <p>System.out.println("What is your name?");</p>
+              <p>name = input.nextLine();</p>
+              <p>System.out.println("How old are you " + name + "?");</p>
+              <p>age = input.nextInt();</p>
+              <p>System.out.println("Name:" + name + " Age:" + age );</p>
+              <p>}</p>
+              <p>}</p>
+            </small>
           </aside>
         </section>
 
@@ -543,14 +541,21 @@
             <p>Some useful String methods; examples</p>
 
             <p>System.out.println ("What is your name?");</p>
-            <p>String name = input.nextLine ();            </p>
-            <p>System.out.println ("What is your number?"); </p>
+            <p>String name = input.nextLine ();</p>
+            <p>System.out.println ("What is your number?");</p>
             <p>String phone = input.nextLine ();</p>
-            <p>System.out.println ("Hi " + name + ". Your name is "+ name.length() +" letters long." );    </p>
-            <p>System.out.println ("Checking is your name Fred? "+ name.equals("Fred") );</p>
+            <p>
+              System.out.println ("Hi " + name + ". Your name is "+
+              name.length() +" letters long." );
+            </p>
+            <p>
+              System.out.println ("Checking is your name Fred? "+
+              name.equals("Fred") );
+            </p>
             <p>System.out.println("Your initial is: " + name.charAt(0));</p>
-            <p>System.out.println ("Your area code is " + phone.substring(0,3) );</p>
-
+            <p>
+              System.out.println ("Your area code is " + phone.substring(0,3) );
+            </p>
           </aside>
         </section>
 
@@ -571,8 +576,6 @@
           </aside>
         </section>
 
-        
-
         <section class="left">
           <h2>Operators</h2>
           <p class="fragment" data-fragment-index="1">Arithmetic</p>
@@ -590,22 +593,60 @@
           </p>
 
           <aside class="notes">
-            <p>Go through types in order.</p>
-            <p>Give examples of most commonly used in each type.</p>
-            <br />
-            <p>Note: Order of arithmetic operations: BODMAS / PEDMAS</p>
+            <p>int x = 20;</p>
+            <p>int y = 4;</p>
+            <p></p>
+            <p>// x++ shortcut for x = x + 1</p>
+            <p></p>
+            <p>// x++ vs ++x</p>
+            <p></p>
+            <p>// x+=5 shortcut for x = x + 5</p>
+            <p></p>
+            <p>// note order of operations</p>
+            <p>int result1 = x + y / 2;</p>
+            <p>int result2 = (x + y) / 2;</p>
+            <p></p>
+            <p>System.out.println( result1 );</p>
+            <p>System.out.println( result2 );</p>
           </aside>
-        </section>   
-
+        </section>
 
         <section class="left">
           <h2>Some Useful Math methods</h2>
 
           <p class="fragment slide-code">Math.pow()</p>
           <p class="fragment slide-code">Math.random()</p>
-          
+
           <aside class="notes">
-            <p>Some useful Math methods</p>
+            <p>
+              // power<br/>
+            int y = 4;<br/>
+            System.out.println( Math.pow(y,2) );</p>
+            <p></p>
+
+            <p>
+              double random;<br/>
+              int limit;<br/>
+            <br>
+            // generate a random number<br>
+            random = Math.random();<br>
+            System.out.println( random ); // between 0 and 1 (but never 1)
+            <br>
+            <br>
+            // random between 0 and n-1<br>
+            limit = 100;<br>
+            random = Math.random() * limit;<br>
+            System.out.println( random ); // between 0 and 99<br>
+            <br>
+            // but we want integers<br>
+            random = Math.random() * limit;<br>
+            System.out.println( (int) random ); // integer between 0 and 99
+            <br>
+            <br>
+            // but we want integers between 1 and 100<br>
+            random = ( Math.random() * limit ) + 1;<br>
+            System.out.println( (int) random ); // integer between 1 and 100
+            </p>
           </aside>
         </section>
 
@@ -618,7 +659,7 @@
 
           <p class="fragment" data-fragment-index="2">Logical</p>
           <p class="fragment slide-code" data-fragment-index="4">
-            &amp;&amp; ||
+            &amp;&amp; (AND)  || (OR)
           </p>
 
           <p class="fragment" data-fragment-index="5">How? When?</p>
@@ -655,8 +696,11 @@
 
             <p>Ex2 add ELSE: else "you are a teen"</p>
 
+            <p>Can anyone see the problem with this?<br>
+            What if input was 30??</p>
+
             <p>
-              Ex3 add AND logical op: but what if input was 30? <br />
+              Ex3 add AND logical op:  <br />
               so better: if ( age &gt;= 13 &amp;&amp; age &lt;= 19) <br />
               then "teen" <br />
               else "not a teen"
@@ -676,13 +720,15 @@
 
           <p class="fragment">Array</p>
           <p class="fragment">- fixed size</p>
-          <p class="fragment">- same data type</p>          
+          <p class="fragment">- same data type</p>
 
           <aside class="notes">
-            <p>An array is a fixed-size collection of elements of the same type.</p>             
-            <p>Fixed size is determined at the time of declaration.             </p>
-            <p>Once an array is created, its size cannot be changed.            </p>
-            <p>Can store elements of any type (primitive or object).            </p>
+            <p>
+              An array is a fixed-size collection of elements of the same type.
+            </p>
+            <p>Fixed size is determined at the time of declaration.</p>
+            <p>Once an array is created, its size cannot be changed.</p>
+            <p>Can store elements of any type (primitive or object).</p>
           </aside>
         </section>
 
@@ -726,8 +772,6 @@
             <p>creating our own custom classes & objects</p>
           </aside>
         </section>
-
-        
 
         <section class="left">
           <h2>Where To Find more</h2>
