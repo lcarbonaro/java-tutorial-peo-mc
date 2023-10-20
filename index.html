@@ -11,11 +11,15 @@
       }
       aside.notes {
         font-size: 12px !important;
-      }     
+      }
       p.slide-code {
         font-family: "Courier New";
         font-size: larger;
         color: peru;
+      }
+      .speaker-controls-notes .value  {
+        font-size: 10px !important;
+        font-family: "Courier New" !important;
       }
     </style>
   </head>
@@ -46,7 +50,8 @@
           <aside class="notes">
             <p>
               Good evening and welcome to this Java tutorial in preparation for
-              the Coding Challenge organised by<br> Professional Engineers Ontario,<br>
+              the Coding Challenge organised by<br />
+              Professional Engineers Ontario,<br />
               Mississauga Chapter
             </p>
             <p>
@@ -79,7 +84,10 @@
           <aside class="notes">
             <p>It is mostly about about web development.</p>
             <p>HTML, CSS, JS that sort of thing.</p>
-            <p>So feel free to check us out on meetup.com and drop in for our online sessions.</p>
+            <p>
+              So feel free to check us out on meetup.com and drop in for our
+              online sessions.
+            </p>
           </aside>
         </section>
 
@@ -114,7 +122,7 @@
                 and then use your favourite code editor or IDE (Integrated
                 Development Environment)
               </p>
-              <p>OR the zero-downloads zero-installs option </p>
+              <p>OR the zero-downloads zero-installs option</p>
               <p>Just use one of the several online Java compilers</p>
               <p>Will be using onlinegdb for examples</p>
               <p>And that is defintely good enough for you to follow along</p>
@@ -125,7 +133,8 @@
             <ul>
               <li>
                 <a href="https://www.onlinegdb.com/online_java_compiler"
-                  >OnlineGDB</a>
+                  >OnlineGDB</a
+                >
               </li>
               <li>
                 <a href="https://www.codiva.io">Codiva</a>
@@ -188,8 +197,9 @@
 
           <aside class="notes">
             <p>
-              And while Sun was an American company based in California, Mr Gosling
-              is a Canadian computer scientist orginally from Calgary, Alberta.
+              And while Sun was an American company based in California, Mr
+              Gosling is a Canadian computer scientist orginally from Calgary,
+              Alberta.
             </p>
           </aside>
         </section>
@@ -374,7 +384,7 @@
             <li>String</li>
           </ul>
 
-           <p class="fragment">primitive types vs object types</p>
+          
 
           <aside class="notes">
             <p>a variable is a value stored in memory and given a label</p>
@@ -386,6 +396,7 @@
               meaning we must declare ahead of time what type of value we intend
               to store in that variable
             </p>
+            <p>just mention primitive types vs object types</p>
           </aside>
         </section>
 
@@ -418,7 +429,7 @@
             <p>naming convention is camelCase</p>
           </aside>
         </section>
-
+<!--
         <section class="left">
           <h2>Variable Type Conversion</h2>
           <p class="fragment">(Also known as Casting)</p>
@@ -455,6 +466,7 @@
             </p>
           </aside>
         </section>
+      -->
 
         <section class="left">
           <h2>Inputs</h2>
@@ -465,14 +477,15 @@
           <aside class="notes">
             <p>We spoke about output.</p>
             <p>Programs typically also need input.</p>
-            <p>One common way to fetch input values into our program
-              is to prompt user for the input</p>
             <p>
-              Java has several built-in classes. One of those is the Scanner class which
-              we can use for input.
+              One common way to fetch input values into our program is to prompt
+              user for the input
+            </p>
+            <p>
+              Java has several built-in classes. One of those is the Scanner
+              class which we can use for input.
             </p>
             <p>Let me show you what I mean.</p>
-            
           </aside>
         </section>
 
@@ -499,8 +512,35 @@
         </pre>
 
           <aside class="notes">
-            <p>Walk through code</p>
-            <p>Then type in an example</p>
+            <p>Walk through code, then example</p>            
+<small>
+            <p>import java.util.Scanner;                                 </p>
+            <p>public class Main {</p>
+            <p>  public static void main(String[] args) {</p>
+            <p>    String name;</p>
+            <p>    int age;</p>
+            <p>    Scanner input = new Scanner(System.in);</p>
+            <p>    System.out.println("What is your name?");</p>
+            <p>    name = input.nextLine();</p>
+            <p>    System.out.println("How old are you " + name + "?");</p>
+            <p>    age = input.nextInt();</p>
+            <p>    System.out.println("Name:" + name + " Age:" + age );</p>
+            <p>  }</p>
+            <p>}  </p>
+          </small>
+          </aside>
+        </section>
+
+        <section class="left">
+          <h2>Some Useful String methods</h2>
+
+          <p class="fragment slide-code">.length()</p>
+          <p class="fragment slide-code">.equals()</p>
+          <p class="fragment slide-code">.charAt()</p>
+          <p class="fragment slide-code">.substring()</p>
+
+          <aside class="notes">
+            <p>Some useful String methods</p>
           </aside>
         </section>
 
@@ -514,33 +554,15 @@
 
           <aside class="notes">
             <p>
-              It was soon dicovered that another company, called Oak Technologies,
-              already had rights to that name, and so James and his team at Sun
-              had to come up with another name.
+              It was soon dicovered that another company, called Oak
+              Technologies, already had rights to that name, and so James and
+              his team at Sun had to come up with another name.
             </p>
           </aside>
         </section>
 
-         <section class="left">
-          <h2>Useful String &amp; Math methods</h2>
-
-           <p>.length()</p>
-           <p>.equals()</p>
-           <p>.charAt()</p>
-           <p>.substring()</p>
-
-           <p>Math.pow()</p>
-           <p>Math.random()</p>
-
-           <aside class="notes">
-            <p>
-              Some useful string and math methods
-            </p>
-          </aside>
-           
-         </section>
-
         
+
         <section class="left">
           <h2>Operators</h2>
           <p class="fragment" data-fragment-index="1">Arithmetic</p>
@@ -563,6 +585,18 @@
             <br />
             <p>Note: Order of arithmetic operations: BODMAS / PEDMAS</p>
           </aside>
+        </section>   
+
+
+        <section class="left">
+          <h2>Some Useful Math methods</h2>
+
+          <p class="fragment slide-code">Math.pow()</p>
+          <p class="fragment slide-code">Math.random()</p>
+          
+          <aside class="notes">
+            <p>Some useful Math methods</p>
+          </aside>
         </section>
 
         <section class="left">
@@ -584,7 +618,7 @@
             <p>Next we will see usages of these last two operator types.</p>
           </aside>
         </section>
-        
+
         <section class="left">
           <h2>Conditional Statements</h2>
           <p class="fragment">
@@ -603,63 +637,44 @@
 
           <aside class="notes">
             <p>
-              These last two types of operators
-              (comparison and logical operators)
-              come in especially handy for use in
-              conditional statements.
+              These last two types of operators (comparison and logical
+              operators) come in especially handy for use in conditional
+              statements.
             </p>
             <p>Ex1 basic IF: input age; if age &lt; 13 "not a teen"</p>
 
             <p>Ex2 add ELSE: else "you are a teen"</p>
 
-            <p>Ex3 add AND logical op: but what if input was 30? <br>
-              so better: if ( age &gt;= 13 &amp;&amp; age &lt;= 19) <br> 
-              then "teen" <br>
-              else "not a teen" </p>
+            <p>
+              Ex3 add AND logical op: but what if input was 30? <br />
+              so better: if ( age &gt;= 13 &amp;&amp; age &lt;= 19) <br />
+              then "teen" <br />
+              else "not a teen"
+            </p>
 
-            <p>Ex4 OR logical op: if( age &lt; 16 || age &gt; 90) <br>
-                then "should not be driving" <br>
-                else "drive on"</p>
+            <p>
+              Ex4 OR logical op: if( age &lt; 16 || age &gt; 90) <br />
+              then "should not be driving" <br />
+              else "drive on"
+            </p>
           </aside>
         </section>
-
-       
-
 
         <section class="left">
           <h2>Arrays</h2>
           <p class="fragment">Grouped values</p>
-          
+
           <p class="fragment">Array</p>
           <p class="fragment">- fixed size</p>
-          <p class="fragment">- primitive or object data type</p>
-          <p class="fragment">ArrayList</p>
-          <p class="fragment">- dynamic size</p>
-          <p class="fragment">- object data type</p>
+          <p class="fragment">- same data type</p>          
 
           <aside class="notes">
-            slide notes In Java, an array is a fixed-size collection of elements
-            of the same type. It is a basic data structure with a contiguous
-            block of memory allocated to store its elements. On the other hand,
-            an ArrayList is a dynamic, resizable implementation of the List
-            interface. It is part of the Java Collections Framework and provides
-            more flexibility compared to arrays. Here are some key differences
-            between arrays and ArrayList: Size: Arrays have a fixed size that is
-            determined at the time of declaration. Once an array is created, its
-            size cannot be changed. On the other hand, an ArrayList can grow and
-            shrink dynamically as elements are added or removed. Type: Arrays
-            can store elements of any type (primitive or object). However,
-            ArrayList can only store object references, meaning it can store
-            objects of any type but not primitive types directly. For primitive
-            types, you have to use their corresponding object wrapper classes
-            (e.g., Integer, Character) as ArrayList elements. Arrays are
-            generally suitable for situations where the size is known in advance
-            and doesn't change frequently. ArrayLists are more convenient for
-            scenarios where the size is variable and requires frequent
-            modifications.
+            <p>An array is a fixed-size collection of elements of the same type.</p>             
+            <p>Fixed size is determined at the time of declaration.             </p>
+            <p>Once an array is created, its size cannot be changed.            </p>
+            <p>Can store elements of any type (primitive or object).            </p>
           </aside>
         </section>
-      
 
         <section class="left">
           <h2>Loop Statements</h2>
@@ -672,14 +687,12 @@
           </aside>
         </section>
 
-        
-
         <section class="left">
           <h2>Functions &amp; Methods</h2>
-          <p class="fragment">            
-            &lt;return-data-type&gt; myFunctionName( &lt;parameter-list&gt;  ) { <br>  
-                 // method-logic-goes-here
-            }
+          <p class="fragment">
+            &lt;return-data-type&gt; myFunctionName( &lt;parameter-list&gt; ) {
+            <br />
+            // method-logic-goes-here }
           </p>
 
           <aside class="notes">slide notes</aside>
@@ -688,9 +701,7 @@
         <section>
           <img src="java-fun-fact.png" alt="java-fun-fact" />
           <p class="fragment fade-up">What year was Java launched?</p>
-          <p class="fragment fade-left">
-            Java 1.0 came out in 1996.
-          </p>
+          <p class="fragment fade-left">Java 1.0 came out in 1996.</p>
 
           <aside class="notes">
             <p>And currently Java is at version number 21.</p>
@@ -706,13 +717,15 @@
           </aside>
         </section>
 
+        
+
         <section class="left">
           <h2>Where To Find more</h2>
+          <p class="fragment">link to these slides</p>
           <p class="fragment">links to docs, other tutorials</p>
 
           <aside class="notes">
             <p>as you may imagine, we have barely scratched the surface</p>
-            
           </aside>
         </section>
 
