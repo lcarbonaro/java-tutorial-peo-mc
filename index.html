@@ -414,12 +414,14 @@
           <p>Let's see some code examples...</p>
 
           <aside class="notes">
-            <p>int qty = 5;<br>
-            float price = 5.99f;<br>
-            double usdExchangeRate = 0.731794d;<br>
-            boolean isMember = true;<br>
-            char myInitial = 'L';<br>
-            String greeting = "Hello";</p>
+            <p>
+              int qty = 5;<br />
+              float price = 5.99f;<br />
+              double usdExchangeRate = 0.731794d;<br />
+              boolean isMember = true;<br />
+              char myInitial = 'L';<br />
+              String greeting = "Hello";
+            </p>
 
             <p>Note:you do not have to assign a value right away</p>
 
@@ -620,33 +622,34 @@
 
           <aside class="notes">
             <p>
-              // power<br/>
-            int y = 4;<br/>
-            System.out.println( Math.pow(y,2) );</p>
+              // power<br />
+              int y = 4;<br />
+              System.out.println( Math.pow(y,2) );
+            </p>
             <p></p>
 
             <p>
-              double random;<br/>
-              int limit;<br/>
-            <br>
-            // generate a random number<br>
-            random = Math.random();<br>
-            System.out.println( random ); // between 0 and 1 (but never 1)
-            <br>
-            <br>
-            // random between 0 and n-1<br>
-            limit = 100;<br>
-            random = Math.random() * limit;<br>
-            System.out.println( random ); // between 0 and 99<br>
-            <br>
-            // but we want integers<br>
-            random = Math.random() * limit;<br>
-            System.out.println( (int) random ); // integer between 0 and 99
-            <br>
-            <br>
-            // but we want integers between 1 and 100<br>
-            random = ( Math.random() * limit ) + 1;<br>
-            System.out.println( (int) random ); // integer between 1 and 100
+              double random;<br />
+              int limit;<br />
+              <br />
+              // generate a random number<br />
+              random = Math.random();<br />
+              System.out.println( random ); // between 0 and 1 (but never 1)
+              <br />
+              <br />
+              // random between 0 and n-1<br />
+              limit = 100;<br />
+              random = Math.random() * limit;<br />
+              System.out.println( random ); // between 0 and 99<br />
+              <br />
+              // but we want integers<br />
+              random = Math.random() * limit;<br />
+              System.out.println( (int) random ); // integer between 0 and 99
+              <br />
+              <br />
+              // but we want integers between 1 and 100<br />
+              random = ( Math.random() * limit ) + 1;<br />
+              System.out.println( (int) random ); // integer between 1 and 100
             </p>
           </aside>
         </section>
@@ -660,7 +663,7 @@
 
           <p class="fragment" data-fragment-index="2">Logical</p>
           <p class="fragment slide-code" data-fragment-index="4">
-            &amp;&amp; (AND)  || (OR)
+            &amp;&amp; (AND) || (OR)
           </p>
 
           <p class="fragment" data-fragment-index="5">How? When?</p>
@@ -697,11 +700,13 @@
 
             <p>Ex2 add ELSE: else "you are a teen"</p>
 
-            <p>Can anyone see the problem with this?<br>
-            What if input was 30??</p>
+            <p>
+              Can anyone see the problem with this?<br />
+              What if input was 30??
+            </p>
 
             <p>
-              Ex3 add AND logical op:  <br />
+              Ex3 add AND logical op: <br />
               so better: if ( age &gt;= 13 &amp;&amp; age &lt;= 19) <br />
               then "teen" <br />
               else "not a teen"
@@ -717,24 +722,40 @@
 
         <section class="left">
           <h2>Arrays</h2>
-          <p class="fragment">List or group of values</p>          
+          <p class="fragment">A list or group of values</p>
+          <p class="fragment">Multiple values in one variable</p>
           <p class="fragment">- fixed number of values</p>
           <p class="fragment">- same data type</p>
+          <p class="fragment">- access by zero-based index</p>
           <p class="fragment">- can be multi-dimensional</p>
 
           <aside class="notes">
             <p>
               An array is a fixed-size collection of elements of the same type.
+              <br />
+              A way to store multiple values in one variable.
             </p>
-            <p>Fixed size is determined at the time of declaration.</p>
-            <p>Once an array is created, its size cannot be changed.</p>
-            <p>Can store elements of any type (primitive or object).</p>
+            <p>
+              // as separate variables <br />
+              String name1 = "Tom"; <br />
+              String name2 = "Richard"; <br />
+              String name3 = "Harriet"; <br />
+              // as an array <br />
+              String[] names = {"Tom","Richard","Harriet"};
+            </p>
+            <p>
+              Fixed size is determined at the time of declaration.<br>
+              Once an array is created, its size cannot be changed. <br> 
+              Can check size using .length property (not method)<br />
+              Access via zero-based index; can change values this way too <br>
+              names[0] = "Thomas";
+            </p>
           </aside>
         </section>
 
         <section class="left">
           <h2>Loop Statements</h2>
-          <p class="fragment">for</p>          
+          <p class="fragment">for</p>
           <p class="fragment">while</p>
 
           <aside class="notes">
@@ -754,7 +775,7 @@
         <section class="left">
           <h2>Methods</h2>
           <p class="fragment">(a.k.a. functions in other languages)</p>
-          
+
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
               &lt;data-type&gt; myFunctionName( &lt;parameter-list&gt; ) {
