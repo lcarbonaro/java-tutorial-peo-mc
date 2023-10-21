@@ -741,13 +741,24 @@
               String name2 = "Richard"; <br />
               String name3 = "Harriet"; <br />
               // as an array <br />
-              String[] names = {"Tom","Richard","Harriet"};
+              String[] names = new String[]{"Tom","Richard","Harriet"};
+            </p>
+            <p>
+              to declare with known values, see names example above<br>
+              to declare empty array<br>
+              int[] numbers = new int[3];<br>
+              numbers[0] = 100;<br>
+              numbers[1] = 401;<br>
+              numbers[2] = 42;<br>
+              numbers[3] = 13; // will give out-of-bounds error<br>
             </p>
             <p>
               Fixed size is determined at the time of declaration.<br>
               Once an array is created, its size cannot be changed. <br> 
               Can check size using .length property (not method)<br />
-              Access via zero-based index; can change values this way too <br>
+              Access via (zero-based) index 
+              System.out.println( names[2] ); <br>
+              Can change values via index too <br>
               names[0] = "Thomas";
             </p>
           </aside>
