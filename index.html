@@ -491,19 +491,7 @@
         </section>
 
 
-        <section class="left">
-          <h2>Inputs cont.</h2>
-          <p class="fragment">InputStream</p>
-          <p class="fragment">BufferedReader</p>          
-          <p class="fragment">gives string, so need to convert</p>
-
-          <aside class="notes">
-            <p></p>
-            <p>this is an older way <br>
-              clearly more convoluted <br>
-              but apparently more performant</p>
-          </aside>
-        </section>
+        
 
         <section data-auto-animate>
           <h2>Inputs</h2>
@@ -544,6 +532,63 @@
               <p>}</p>
               <p>}</p>
             </small>
+          </aside>
+        </section>
+
+        <section class="left">
+          <h2>Inputs cont.</h2>
+          
+          <p class="fragment">BufferedReader</p>       
+          <p class="fragment">InputStreamReader</p>
+          <p class="fragment">StringTokenizer</p>
+          <p class="fragment">gives string, so need to convert</p>
+
+           <pre data-id="code-animation">
+          <code class="hljs java" data-trim data-line-numbers="">
+            // 1. import the required Java libraries
+            import java.io.InputStreamReader;
+            import java.io.BufferedReader;
+            import java.util.StringTokenizer;
+            import java.io.IOException;            
+            
+            public class Main {
+            	public static void main(String[] args) {
+            		System.out.println("Enter item qty price");
+            		
+            		// 2. set up readers & tokenizer
+            		InputStreamReader isr = new InputStreamReader( System.in );
+            		BufferedReader br = new BufferedReader(isr);
+            		StringTokenizer st = null;  
+            		
+            		// 3. read input line
+            		// note that must catch exception
+            		try {
+                    st = new StringTokenizer(br.readLine());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            		
+            		// 4. tokenise (chop up) the input into respective variables
+            		// note parse methods for int, float            		
+            		String item = st.nextToken();
+                int qty = Integer.parseInt( st.nextToken() );
+            		float price = Float.parseFloat( st.nextToken() );
+            		
+            		// use input variables as needed
+            		System.out.println("input item is: " + item);
+            		System.out.println("input qty is: " + qty);
+            		System.out.println("input price is: " + price);
+            	}
+            }
+          </code>
+        </pre>
+
+          <aside class="notes">
+            <p></p>
+            <p>this is an older way <br>
+              clearly more convoluted <br>
+              but apparently more performant</p>
+            <p>see:  https://dmoj.ca/tips/#java-input </p>
           </aside>
         </section>
 
