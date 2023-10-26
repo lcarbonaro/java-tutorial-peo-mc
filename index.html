@@ -539,7 +539,7 @@
           <h2>Inputs cont.</h2>        
 
           <pre class="fragment" data-id="code-animation">
-          <code class="hljs java" data-trim data-line-numbers="1-5|10-13|15-21|22-26|27-30|1-32">
+          <code class="hljs java" data-trim data-line-numbers="1-5|11-14|16-22|24-28|30-33|1-35">
             // 1. import the required Java libraries
             import java.io.InputStreamReader;
             import java.io.BufferedReader;
@@ -550,7 +550,7 @@
             	public static void main(String[] args) {
             		System.out.println("Enter item qty price");
             		
-            		// 2. set up readers & tokenizer
+            		// 2. set up readers & tokeniser
             		InputStreamReader isr = new InputStreamReader( System.in );
             		BufferedReader br = new BufferedReader(isr);
             		StringTokenizer st = null;  
@@ -578,8 +578,7 @@
           </code>
         </pre>
 
-          <aside class="notes">
-            <p></p>
+          <aside class="notes">            
             <p>this is an older way <br>
               clearly more convoluted <br>
               but apparently more performant</p>
