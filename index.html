@@ -490,9 +490,6 @@
           </aside>
         </section>
 
-
-        
-
         <section data-auto-animate>
           <h2>Inputs</h2>
           <pre data-id="code-animation">
@@ -518,25 +515,27 @@
           <aside class="notes">
             <p>Walk through code, then example</p>
             <small>
-              <p>import java.util.Scanner;</p>
-              <p>public class Main {</p>
-              <p>public static void main(String[] args) {</p>
-              <p>String name;</p>
-              <p>int age;</p>
-              <p>Scanner input = new Scanner(System.in);</p>
-              <p>System.out.println("What is your name?");</p>
-              <p>name = input.nextLine();</p>
-              <p>System.out.println("How old are you " + name + "?");</p>
-              <p>age = input.nextInt();</p>
-              <p>System.out.println("Name:" + name + " Age:" + age );</p>
-              <p>}</p>
-              <p>}</p>
+              <pre>
+                <code>
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    String name;
+    int age;
+    Scanner input = new Scanner(System.in);
+    System.out.println("What is your name?");
+    name = input.nextLine();
+    System.out.println("How old are you " + name + "?");
+    age = input.nextInt();
+    System.out.println("Name:" + name + " Age:" + age );
+  }
+}</code></pre>
             </small>
           </aside>
         </section>
 
         <section class="left">
-          <h2>Inputs cont.</h2>        
+          <h2>Inputs cont.</h2>
 
           <pre class="fragment" data-id="code-animation">
           <code class="hljs java" data-trim data-line-numbers="1-5|11-14|16-22|24-28|30-33|1-35">
@@ -578,11 +577,13 @@
           </code>
         </pre>
 
-          <aside class="notes">            
-            <p>this is an older way <br>
-              clearly more convoluted <br>
-              but apparently more performant</p>
-            <p>see:  https://dmoj.ca/tips/#java-input </p>
+          <aside class="notes">
+            <p>
+              this is an older way <br />
+              clearly more convoluted <br />
+              but apparently more performant
+            </p>
+            <p>see: https://dmoj.ca/tips/#java-input</p>
           </aside>
         </section>
 
@@ -597,22 +598,24 @@
           <aside class="notes">
             <p>Some useful String methods; examples</p>
 
-            <p>System.out.println ("What is your name?");</p>
-            <p>String name = input.nextLine ();</p>
-            <p>System.out.println ("What is your number?");</p>
-            <p>String phone = input.nextLine ();</p>
-            <p>
-              System.out.println ("Hi " + name + ". Your name is "+
-              name.length() +" letters long." );
-            </p>
-            <p>
-              System.out.println ("Checking is your name Fred? "+
-              name.equals("Fred") );
-            </p>
-            <p>System.out.println("Your initial is: " + name.charAt(0));</p>
-            <p>
-              System.out.println ("Your area code is " + phone.substring(0,3) );
-            </p>
+            <small>
+              <pre><code>
+System.out.println ("What is your name?");
+String name = input.nextLine ();
+System.out.println ("What is your number?");
+String phone = input.nextLine ();
+
+System.out.println ("Hi " + name + ". Your name is "+
+name.length() +" letters long." );
+    
+System.out.println ("Checking is your name Fred? "+
+name.equals("Fred") );
+
+System.out.println("Your initial is: " + name.charAt(0));
+
+System.out.println ("Your area code is " + phone.substring(0,3) );            
+          </code></pre>
+            </small>
           </aside>
         </section>
 
@@ -650,21 +653,25 @@
           </p>
 
           <aside class="notes">
-            <p>int x = 20;</p>
-            <p>int y = 4;</p>
-            <p></p>
-            <p>// x++ shortcut for x = x + 1</p>
-            <p></p>
-            <p>// x++ vs ++x</p>
-            <p></p>
-            <p>// x+=5 shortcut for x = x + 5</p>
-            <p></p>
-            <p>// note order of operations</p>
-            <p>int result1 = x + y / 2;</p>
-            <p>int result2 = (x + y) / 2;</p>
-            <p></p>
-            <p>System.out.println( result1 );</p>
-            <p>System.out.println( result2 );</p>
+            <small>
+              <pre><code>
+int x = 20;
+int y = 4;
+
+// x++ shortcut for x = x + 1
+
+// x++ vs ++x
+
+// x+=5 shortcut for x = x + 5
+
+// note order of operations
+int result1 = x + y / 2;
+int result2 = (x + y) / 2;
+
+System.out.println( result1 );
+System.out.println( result2 );
+              </code></pre>
+            </small>
           </aside>
         </section>
 
@@ -675,36 +682,33 @@
           <p class="fragment slide-code">Math.random()</p>
 
           <aside class="notes">
-            <p>
-              // power<br />
-              int y = 4;<br />
-              System.out.println( Math.pow(y,2) );
-            </p>
-            <p></p>
+            <small>
+              <pre><code>                
+// power
+int y = 4;
+System.out.println( Math.pow(y,2) );
+              
+double random;
+int limit;
 
-            <p>
-              double random;<br />
-              int limit;<br />
-              <br />
-              // generate a random number<br />
-              random = Math.random();<br />
-              System.out.println( random ); // between 0 and 1 (but never 1)
-              <br />
-              <br />
-              // random between 0 and n-1<br />
-              limit = 100;<br />
-              random = Math.random() * limit;<br />
-              System.out.println( random ); // between 0 and 99<br />
-              <br />
-              // but we want integers<br />
-              random = Math.random() * limit;<br />
-              System.out.println( (int) random ); // integer between 0 and 99
-              <br />
-              <br />
-              // but we want integers between 1 and 100<br />
-              random = ( Math.random() * limit ) + 1;<br />
-              System.out.println( (int) random ); // integer between 1 and 100
-            </p>
+// generate a random number
+random = Math.random();
+System.out.println( random ); // between 0 and 1 (but never 1)
+
+// random between 0 and n-1
+limit = 100;
+random = Math.random() * limit;
+System.out.println( random ); // between 0 and 99
+
+// but we want integers
+random = Math.random() * limit;
+System.out.println( (int) random ); // integer between 0 and 99
+
+// but we want integers between 1 and 100
+random = ( Math.random() * limit ) + 1;
+System.out.println( (int) random ); // integer between 1 and 100                
+              </code></pre>
+            </small>
           </aside>
         </section>
 
@@ -776,7 +780,7 @@
 
         <section class="left">
           <h2>Arrays</h2>
-          <p class="fragment">A list or group of values</p>
+          <p class="fragment">A list or group of values; a collection</p>
           <p class="fragment">Multiple values in one variable</p>
           <p class="fragment">- fixed number of values</p>
           <p class="fragment">- same data type</p>
@@ -784,58 +788,118 @@
           <p class="fragment">- can be multi-dimensional</p>
 
           <aside class="notes">
-            <p>
-              An array is a fixed-size collection of elements of the same type.
-              <br />
-              A way to store multiple values in one variable.
-            </p>
-            <p>
-              // as separate variables <br />
-              String name1 = "Tom"; <br />
-              String name2 = "Richard"; <br />
-              String name3 = "Harriet"; <br />
-              // as an array <br />
+            <small>
+              <p>
+                An array is a fixed-size collection of elements of the same
+                type.
+                <br />
+                A way to store multiple values in one variable. One type of
+                collection.
+              </p>
+              <small>
+                <pre><code>
+              // as separate variables 
+              String name1 = "Tom"; 
+              String name2 = "Richard"; 
+              String name3 = "Harriet"; 
+              // as an array 
               String[] names = new String[]{"Tom","Richard","Harriet"};
-            </p>
-            <p>
-              to declare with known values, see names example above<br>
-              to declare empty array<br>
-              int[] numbers = new int[3];<br>
-              numbers[0] = 100;<br>
-              numbers[1] = 401;<br>
-              numbers[2] = 42;<br>
-              numbers[3] = 13; // will give out-of-bounds error<br>
-            </p>
-            <p>
-              Fixed size is determined at the time of declaration.<br>
-              Once an array is created, its size cannot be changed. <br> 
-              Can check size using .length property (not method)<br />
-              Access via (zero-based) index 
-              System.out.println( names[2] ); <br>
-              Can change values via index too <br>
-              names[0] = "Thomas";
-            </p>
+            </code>
+            </pre>
+              </small>
+              <p>
+                to declare with known values, see names example above<br />
+                to declare empty array
+              </p>
+              <small>
+                <pre><code>
+              int[] numbers = new int[3];
+              numbers[0] = 100;
+              numbers[1] = 401;
+              numbers[2] = 42;
+              numbers[3] = 13; // will give out-of-bounds error
+            </code>
+          </pre>
+              </small>
+              <p>
+                Fixed size is determined at the time of declaration.<br />
+                Once an array is created, its size cannot be changed. <br />
+                Can check size using .length property (not method)<br />
+                Access via (zero-based) index System.out.println( names[2] );
+                <br />
+                Can change values via index too <br />
+                names[0] = "Thomas";
+              </p>
+            </small>
           </aside>
         </section>
 
         <section class="left">
           <h2>For-Loop Statements</h2>
-          <p class="fragment">for</p>
+
+          <p class="fragment">For</p>
+          <pre class="fragment" data-id="code-animation">
+            <code class="hljs java" data-trim data-line-numbers>
+            for (initialization; condition; iteration) {
+
+              // Code to be executed on each iteration
+        
+            }
+            </code>
+          </pre>
+
           <p class="fragment">for-each</p>
+          <pre class="fragment" data-id="code-animation">
+            <code class="hljs java" data-trim data-line-numbers>
+            for (dataType variableName : collectionName) {
+
+              // Code to be executed on each element
+      
+            }
+            </code>
+          </pre>
 
           <aside class="notes">
-            <p>slide notes</p>
+            <small>
+              for loop <br>
+              - initialise a counter <br>
+              - condition to keep going <br>
+              - increment counter <br>
+              <pre><code>
+              for (int i = 1; i &lt;= 5; i++) {
+                System.out.println(i);              
+              }
+              </code></pre>
+            </small>
+            <small>
+              for-each loop <br>
+              - data type <br>
+              - variable name each element<br>
+              - array name <br>
+              <pre><code>
+                int[] numbers = {1, 2, 3, 4, 5};
+                for (int num : numbers) {                
+                    System.out.println(num);               
+                }
+              </code></pre>
+            </small>
           </aside>
         </section>
 
-         <section class="left">
+        <section class="left">
           <h2>While-Loop Statements</h2>
           <p class="fragment">while</p>
           <p class="fragment">do-while</p>
 
           <aside class="notes">
-            <p>while checks condition first, so code inside block might not be executed at all</p>            
-            <p>do-while checks condition last, so code inside block will be executed at least once</p>
+            <p>
+              while checks condition first, so code inside block might not be
+              executed at all
+            </p>
+            <p>
+              do-while checks condition last, so code inside block will be
+              executed at least once
+            </p>
             <p>beware the infamous infinite loop</p>
           </aside>
         </section>
@@ -853,9 +917,9 @@
           <h2>Methods</h2>
           <p class="fragment">(a.k.a. functions in other languages)</p>
 
-          <p class="fragment">Reusable snippets of code</p>  
-          <p class="fragment">- DRY principle</p>  
-          <p class="fragment">- divide &amp; conquer</p>  
+          <p class="fragment">Reusable snippets of code</p>
+          <p class="fragment">- DRY principle</p>
+          <p class="fragment">- divide &amp; conquer</p>
 
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
@@ -871,17 +935,22 @@
             <p>So far we've put everything in one method called main().</p>
             <p>And again I stress that you must always have a main() method.</p>
             <p>Does not mean, however, that you can't have other methods.</p>
-            <p>You certainly can, and in fact you are encouraged to, <br>
-              split your logic up into other methods wherever &amp; whenever applicable.</p>
-
-            <p>scenario/use cases for this<br>
-              - repeated code<br>
-              - break problem into steps to reduce complexity               
+            <p>
+              You certainly can, and in fact you are encouraged to, <br />
+              split your logic up into other methods wherever &amp; whenever
+              applicable.
             </p>
-            
-            <p>examples:<br>
-              no-return no-parms<br>
-              some parms <br>
+
+            <p>
+              scenario/use cases for this<br />
+              - repeated code<br />
+              - break problem into steps to reduce complexity
+            </p>
+
+            <p>
+              examples:<br />
+              no-return no-parms<br />
+              some parms <br />
               some return
             </p>
           </aside>
@@ -902,24 +971,26 @@
           <p class="fragment">Defining other classes</p>
           <p class="fragment">Objects vs classes</p>
 
-          <aside class="notes">            
+          <aside class="notes">
             <p>So far we've been putting everything into one class Main</p>
-            
+
             <p>How about coding other custom classes</p>
             <p>Object as instance of a class</p>
           </aside>
         </section>
 
         <section class="left">
-          <h2>Where To Find More</h2>                   
+          <h2>Where To Find More</h2>
 
           <ul class="fragment">
             <li>
               <a href="https://dev.java/learn/language-basics/">Dev Java</a>
-            </li>             
+            </li>
 
-             <li>
-              <a href="https://www.simplilearn.com/tutorials/java-tutorial">Simplilearn</a>
+            <li>
+              <a href="https://www.simplilearn.com/tutorials/java-tutorial"
+                >Simplilearn</a
+              >
             </li>
 
             <li>
@@ -927,7 +998,9 @@
             </li>
 
             <li>
-              <a href="https://java-tutorial-peo-mc.vercel.app/">This presentation</a>
+              <a href="https://java-tutorial-peo-mc.vercel.app/"
+                >This presentation</a
+              >
             </li>
           </ul>
 
@@ -935,18 +1008,19 @@
 
           <aside class="notes">
             <p>as you may imagine, we have barely scratched the surface</p>
-            <p>some links for you to delve deeper and experiment<br>
-            and ask questions</p>
-            
+            <p>
+              some links for you to delve deeper and experiment<br />
+              and ask questions
+            </p>
           </aside>
         </section>
 
         <section>
           <h2>Thank You</h2>
-          
 
           <aside class="notes">
-            <p>Thank you for your attention, <br>
+            <p>
+              Thank you for your attention, <br />
               And good luck to all the contestants tomorrow.
             </p>
           </aside>
