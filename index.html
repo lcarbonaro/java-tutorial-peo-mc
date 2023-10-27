@@ -8,19 +8,12 @@
     <style>
       section.left {
         text-align: left;
-      }
-      aside.notes {
-        font-size: 12px !important;
-      }
+      }      
       p.slide-code {
         font-family: "Courier New";
         font-size: larger;
         color: peru;
-      }
-      .speaker-controls-notes .value {
-        font-size: 10px !important;
-        font-family: "Courier New" !important;
-      }
+      }        
     </style>
   </head>
 
@@ -840,7 +833,7 @@ System.out.println( (int) random ); // integer between 1 and 100
           <p class="fragment">For</p>
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
-            for (initialization; condition; iteration) {
+            for (initialisation; condition; iteration) {
 
               // Code to be executed on each iteration
         
@@ -895,7 +888,9 @@ System.out.println( (int) random ); // integer between 1 and 100
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
             while (condition) {
+
                 // Code to be executed as long as the condition is true
+
             }            
             </code>
           </pre>
@@ -905,7 +900,9 @@ System.out.println( (int) random ); // integer between 1 and 100
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
             do {
+
                 // Code to be executed at least once
+
             } while (condition);                      
             </code>
           </pre>
@@ -965,11 +962,8 @@ for(int n : numbers ) { // skip even numbers
   if(n % 2 == 0) {
     continue;  // skips iteration
   }
-  System.out.println(n);
-}
-            </code></pre>
-
-
+  System.out.println(n);}
+            </code></pre>            
           </small>
           </aside>
         </section>
@@ -984,10 +978,7 @@ for(int n : numbers ) { // skip even numbers
                 break;
               case value2:
                 // code to be executed if expression matches value2
-                break;
-              case value3:
-                // code to be executed if expression matches value3
-                break;
+                break;              
               // additional case statements if needed
               default:
                 // code to be executed if none of the above cases match
@@ -995,8 +986,31 @@ for(int n : numbers ) { // skip even numbers
             </code>
           </pre>
 
+          <p class="fragment">Let's try this out.</p>
+
           <aside class="notes">
-            <p>more readable than a lengthy if-statement</p>
+            <small>When many values to check, switch more readable than a lengthy if-statement</small>
+            <small><pre><code>
+Scanner input = new Scanner(System.in);	    
+System.out.println("Menu Option 1");
+System.out.println("Menu Option 2");
+System.out.println("Menu Option 3");
+System.out.println("Enter an option:");              
+int choice = input.nextInt();              
+switch(choice) {
+  case 1:
+    System.out.println("ONE");    
+    break;
+  case 2:
+    System.out.println("TWO");    
+    break;
+  case 3:
+    System.out.println("THREE");        
+    break;  
+  default:
+    System.out.println("That is not a valid option!");
+}
+            </code></pre></small>
           </aside>
         </section>
 
