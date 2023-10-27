@@ -13,7 +13,7 @@
         font-family: "Courier New";
         font-size: larger;
         color: peru;
-      }        
+      }          
     </style>
   </head>
 
@@ -986,7 +986,7 @@ for(int n : numbers ) { // skip even numbers
             </code>
           </pre>
 
-          <p class="fragment">Let's try this out.</p>
+          <p class="fragment">Let's try this out with an example.</p>
 
           <aside class="notes">
             <small>When many values to check, switch more readable than a lengthy if-statement</small>
@@ -1024,21 +1024,25 @@ switch(choice) {
 
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
-              &lt;data-type&gt; myFunctionName( &lt;parameter-list&gt; ) {
-
-                // method-logic-goes-here 
-
-              }              
+            accessModifier returnType methodName(parameterList) {
+              
+                // code to be executed
+            
+                // optionally, a return statement to return a value
+            
+            }            
             </code>
           </pre>
 
           <aside class="notes">
-            <p>So far we've put everything in one method called main().</p>
-            <p>And again I stress that you must always have a main() method.</p>
-            <p>Does not mean, however, that you can't have other methods.</p>
+            <small>
+            <p>
+              So far we've been putting all our code in one method called main().<br>
+              And again I stress that you must always have a main() method.<br>
+              Does not mean, however, that you cannot have other methods.</p>
             <p>
               You certainly can, and in fact you are encouraged to, <br />
-              split your logic up into other methods wherever &amp; whenever
+              split your logic up into other methods wherever &amp; whenever <br>
               applicable.
             </p>
 
@@ -1049,11 +1053,21 @@ switch(choice) {
             </p>
 
             <p>
+              access modifier <br>
+              return type <br>
+              method name  <br>
+              parameter list (optional) <br>
+              code block <br>
+              return (optional)
+            </p>
+
+            <p>
               examples:<br />
               no-return no-parms<br />
               some parms <br />
               some return
             </p>
+          </small>
           </aside>
         </section>
 
