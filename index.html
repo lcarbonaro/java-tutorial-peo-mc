@@ -1141,14 +1141,122 @@ public static int calcSum(int[] nums) {
 
         <section class="left">
           <h2>Object-Oriented Programming</h2>
-          <p class="fragment">Defining other classes</p>
-          <p class="fragment">Objects vs classes</p>
+          <p class="fragment">Custom-made classes</p>
+
+          <p class="fragment">- variables and related methods</p>
+
+          <pre class="fragment" data-id="code-animation">
+            <code class="hljs java" data-trim data-line-numbers>
+            public class ClassName {
+
+                // Class variables (a.k.a. attributes, fields, properties)
+            
+                // Class methods
+            
+            }                  
+            </code>
+          </pre>
+
+          <p class="fragment">Let's code a new class from scratch.</p>
 
           <aside class="notes">
-            <p>So far we've been putting everything into one class Main</p>
+            <p>
+              The key strength of OOP languages such as Java is <br />
+              the ability to create custom-defined classes.
+            </p>
+            <p>So far we've been putting everything into one class: Main</p>
+            <p>
+              We also saw that Java has a number of built-in classes, such as
+              Scanner and Math
+            </p>
+            <p>But Java also allows us to define our own classes.</p>
+            <p>A class is a combination of variables and methods.</p>
 
-            <p>How about coding other custom classes</p>
-            <p>Object as instance of a class</p>
+            <small>
+              <pre><code>
+public class Player {    
+  // data attributes 
+  String name;
+  int score;
+  
+  
+  // methods that do something on 
+  // or with the data attributes
+  
+  // display player status
+  public String getPlayerStatus() {
+      return "Player: " + name + " Score: " + score;
+  }
+  
+  // give a player points
+  public void awardPoints(int p) {
+      score += p;
+  }
+  
+  //
+  
+}
+            </code></pre>
+            </small>
+          </aside>
+        </section>
+
+        <section class="left">
+          <h2>OOP cont.</h2>
+
+          <p class="fragment">Classes vs Objects</p>
+          <p class="fragment">- class is the blueprint</p>
+          <p class="fragment">- object is a variable made from that blueprint</p>
+          <p class="fragment">An object is an instance of a class</p>
+          <p class="fragment">Let's see how that works in actual code.</p>
+
+          <aside class="notes">
+            <p>
+              "But you said OBJECT oriented not CLASS oriented!" <br />
+              So which is it? <br />
+              What's an object? and what's it got to do with a class?
+            </p>
+
+            <p>              
+              Class is a template a pattern a model a blueprint a mold <br> 
+              Object is the actual variable made in the shape of that class. <br>
+              Cookie cutter vs cookie
+            </p>
+
+            <p>
+              An object is an instance of a class <br> 
+              So you can then create instances of these custom classes <br>
+              and use them in your main program.
+            </p>
+
+            <small>
+              <pre><code>
+                // create an instance 
+                Player player1 = new Player();
+                
+                // assign some instance attributes
+                player1.name = "Tom";
+                player1.score = 0;
+            
+                // call an instance method
+                System.out.println ( player1.getPlayerStatus() );                
+              </code></pre>
+            </small>
+
+
+            <small>
+              <pre><code>
+                // player wins 10 points
+                player1.score += 10;
+            
+                System.out.println( player1.getPlayerStatus() );
+            
+                // player is given 5 extra points
+                player1.awardPoints(5);
+            
+                System.out.println( player1.getPlayerStatus() );                
+              </code></pre>
+            </small>
           </aside>
         </section>
 
@@ -1157,13 +1265,7 @@ public static int calcSum(int[] nums) {
 
           <ul class="fragment">
             <li>
-              <a href="https://dev.java/learn/language-basics/">Dev Java</a>
-            </li>
-
-            <li>
-              <a href="https://www.simplilearn.com/tutorials/java-tutorial"
-                >Simplilearn</a
-              >
+              <a href="https://dev.java/learn/language-basics/">Dev.Java</a>
             </li>
 
             <li>
@@ -1172,7 +1274,7 @@ public static int calcSum(int[] nums) {
 
             <li>
               <a href="https://java-tutorial-peo-mc.vercel.app/"
-                >This presentation</a
+                >Tutorial slides</a
               >
             </li>
           </ul>
@@ -1180,10 +1282,18 @@ public static int calcSum(int[] nums) {
           <p class="fragment">Any Questions?</p>
 
           <aside class="notes">
-            <p>as you may imagine, we have barely scratched the surface</p>
+            <p>As you may imagine, we have barely scratched the surface</p>
             <p>
-              some links for you to delve deeper and experiment<br />
-              and ask questions
+              Here are some links for you to delve deeper <br />
+              into the concepts we've introduced. <br />
+            </p>
+            <p>
+              Programming is a contact sport <br />
+              by which I mean fingers on keyboards. <br />
+              It is a practice, a discipline where <br />
+              the learning only comes by doing. <br />
+              So try things out, experiment, ask questions, and have fun with
+              it.
             </p>
           </aside>
         </section>
@@ -1198,26 +1308,6 @@ public static int calcSum(int[] nums) {
             </p>
           </aside>
         </section>
-
-        <!--
-
-        <section class="left">
-          <h2>Arithmetic Operators</h2>
-          <p class="fragment"></p>
-
-          <aside class="notes">
-            slide notes
-          </aside>
-        </section>
-
-
-        <section >
-          
-          <img src="java-fun-fact.png" data-auto-animate="funfact"/>
-          <p class="fragment">ghfjghfjghjfghdjfg</p>
-          <p class="fragment">gfkgdfjgklfdjgkflgjdlkf</p>
-        </section>
-        -->
       </div>
       <!-- div.slides -->
     </div>
