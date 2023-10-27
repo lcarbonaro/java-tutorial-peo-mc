@@ -8,12 +8,12 @@
     <style>
       section.left {
         text-align: left;
-      }      
+      }
       p.slide-code {
         font-family: "Courier New";
         font-size: larger;
         color: peru;
-      }          
+      }
     </style>
   </head>
 
@@ -856,10 +856,10 @@ System.out.println( (int) random ); // integer between 1 and 100
 
           <aside class="notes">
             <small>
-              for loop <br>
-              - initialise a counter <br>
-              - condition to keep going <br>
-              - increment counter <br>
+              for loop <br />
+              - initialise a counter <br />
+              - condition to keep going <br />
+              - increment counter <br />
               <pre><code>
               for (int i = 1; i &lt;= 5; i++) {
                 System.out.println(i);              
@@ -867,17 +867,17 @@ System.out.println( (int) random ); // integer between 1 and 100
               </code></pre>
             </small>
             <small>
-              for-each loop <br>
-              - data type <br>
-              - variable name each element<br>
-              - array name <br>
+              for-each loop <br />
+              - data type <br />
+              - variable name each element<br />
+              - array name <br />
               <pre><code>
                 int[] numbers = {1, 2, 3, 4, 5};
                 for (int num : numbers) {                
                     System.out.println(num);               
                 }
               </code></pre>
-            </small>            
+            </small>
           </aside>
         </section>
 
@@ -911,20 +911,20 @@ System.out.println( (int) random ); // integer between 1 and 100
 
           <aside class="notes">
             <small>
-            <p>
-              while checks condition first, so code inside block might not be
-              executed at all
-            </p>
-            <p>
-              do-while checks condition last, so code inside block will be
-              executed at least once
-            </p>
-            <p>
-              Beware the infamous infinite loop! <br>
-              - always have a way out  
-            </p>
+              <p>
+                while checks condition first, so code inside block might not be
+                executed at all
+              </p>
+              <p>
+                do-while checks condition last, so code inside block will be
+                executed at least once
+              </p>
+              <p>
+                Beware the infamous infinite loop! <br />
+                - always have a way out
+              </p>
 
-            <pre><code>
+              <pre><code>
 // example 1: while
 int[] numbers = {11,2,5,88,1,93,6};
 int limit = 3; // only show first 3 numbers in the list
@@ -935,7 +935,7 @@ while(counter &lt; limit) {
 }
             </code></pre>
 
-            <pre><code>   
+              <pre><code>   
 // examples 2,2a: do-while, with break           
 int secret = 5;
 counter = 0;
@@ -950,21 +950,21 @@ do {
 System.out.println("counter:" + counter);
             </code></pre>
 
-            <p>
-              break and continue <br>
-              - tweak example 2 to show break example 2a <br>
-              - give example of continue
-            </p>
+              <p>
+                break and continue <br />
+                - tweak example 2 to show break example 2a <br />
+                - give example of continue
+              </p>
 
-            <pre><code>              
+              <pre><code>              
 // example 3: continue
 for(int n : numbers ) { // skip even numbers
   if(n % 2 == 0) {
     continue;  // skips iteration
   }
   System.out.println(n);}
-            </code></pre>            
-          </small>
+            </code></pre>
+            </small>
           </aside>
         </section>
 
@@ -989,8 +989,12 @@ for(int n : numbers ) { // skip even numbers
           <p class="fragment">Let's try this out with an example.</p>
 
           <aside class="notes">
-            <small>When many values to check, switch more readable than a lengthy if-statement</small>
-            <small><pre><code>
+            <small
+              >When many values to check, switch more readable than a lengthy
+              if-statement</small
+            >
+            <small>
+              <pre><code>
 Scanner input = new Scanner(System.in);	    
 System.out.println("Menu Option 1");
 System.out.println("Menu Option 2");
@@ -1010,7 +1014,8 @@ switch(choice) {
   default:
     System.out.println("That is not a valid option!");
 }
-            </code></pre></small>
+            </code></pre>
+            </small>
           </aside>
         </section>
 
@@ -1021,6 +1026,41 @@ switch(choice) {
           <p class="fragment">Reusable snippets of code</p>
           <p class="fragment">- DRY principle</p>
           <p class="fragment">- divide &amp; conquer</p>
+          <p class="fragment">
+            - better code organisation, reusability, and modularity
+          </p>
+
+          <aside class="notes">
+            <small>
+              <p>
+                So far we've been putting all our code in one method called
+                main().<br />
+                And again I stress that you must always have a main() method.<br />
+                Does not mean, however, that you cannot have other methods.
+              </p>
+              <p>
+                You certainly can, and in fact you are encouraged to, <br />
+                split your logic up into other methods wherever &amp; whenever
+                <br />
+                applicable.
+              </p>
+
+              <p>
+                WHY? To organise code, make it more reusable, <br />
+                and make programs more modular and structured
+              </p>
+
+              <p>
+                WHEN? scenarios/use cases for this<br />
+                - repeated code<br />
+                - break problem into steps to reduce complexity
+              </p>
+            </small>
+          </aside>
+        </section>
+
+        <section class="left">
+          <h2>Methods cont.</h2>
 
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
@@ -1034,40 +1074,58 @@ switch(choice) {
             </code>
           </pre>
 
+          <p class="fragment">Define method once</p>
+          <p class="fragment">Call it as many times as needed</p>
+
+          <p class="fragment">Let's see this in action.</p>
+
           <aside class="notes">
             <small>
-            <p>
-              So far we've been putting all our code in one method called main().<br>
-              And again I stress that you must always have a main() method.<br>
-              Does not mean, however, that you cannot have other methods.</p>
-            <p>
-              You certainly can, and in fact you are encouraged to, <br />
-              split your logic up into other methods wherever &amp; whenever <br>
-              applicable.
-            </p>
+              <p>
+                HOW? <br />
+                access modifier <br />
+                return type <br />
+                method name <br />
+                parameter list (optional) <br />
+                code block <br />
+                return (optional)
+              </p>
+              <p>
+                Note that there are two parts to this: <br />
+                1. defining the method (once) and <br />
+                2. calling it (as many times as you like)
+              </p>
 
-            <p>
-              scenario/use cases for this<br />
-              - repeated code<br />
-              - break problem into steps to reduce complexity
-            </p>
+              <p>
+                examples:<br />
+                no-return no-parms: sayHello()<br />
+                some parms sayAnything(String msg)<br />
+                some return calcSum(int[] numbers)
+              </p>
 
-            <p>
-              access modifier <br>
-              return type <br>
-              method name  <br>
-              parameter list (optional) <br>
-              code block <br>
-              return (optional)
-            </p>
+              <small>
+                <pre><code>
+// defining function example 1
+public static void sayHello() {
+    System.out.println("function says hello!!");
+}
 
-            <p>
-              examples:<br />
-              no-return no-parms<br />
-              some parms <br />
-              some return
-            </p>
-          </small>
+// defining function example 2
+public static void sayAnything(String msg) {
+    System.out.println(msg);
+}
+
+// defining function example 3
+public static int calcSum(int[] nums) {
+    int sum = 0;
+    for(int n : nums) {
+        sum += n;
+    }
+    return sum;
+}
+                </code></pre>
+              </small>
+            </small>
           </aside>
         </section>
 
