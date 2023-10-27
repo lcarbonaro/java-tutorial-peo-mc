@@ -848,7 +848,7 @@ System.out.println( (int) random ); // integer between 1 and 100
             </code>
           </pre>
 
-          <p class="fragment">for-each</p>
+          <p class="fragment">For-Each</p>
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
             for (dataType variableName : collectionName) {
@@ -858,6 +858,8 @@ System.out.println( (int) random ); // integer between 1 and 100
             }
             </code>
           </pre>
+
+          <p class="fragment">Let's see this in practice.</p>
 
           <aside class="notes">
             <small>
@@ -882,16 +884,36 @@ System.out.println( (int) random ); // integer between 1 and 100
                     System.out.println(num);               
                 }
               </code></pre>
-            </small>
+            </small>            
           </aside>
         </section>
 
         <section class="left">
           <h2>While-Loop Statements</h2>
-          <p class="fragment">while</p>
-          <p class="fragment">do-while</p>
+          <p class="fragment">While</p>
+
+          <pre class="fragment" data-id="code-animation">
+            <code class="hljs java" data-trim data-line-numbers>
+            while (condition) {
+                // Code to be executed as long as the condition is true
+            }            
+            </code>
+          </pre>
+
+          <p class="fragment">Do-While</p>
+
+          <pre class="fragment" data-id="code-animation">
+            <code class="hljs java" data-trim data-line-numbers>
+            do {
+                // Code to be executed at least once
+            } while (condition);                      
+            </code>
+          </pre>
+
+          <p class="fragment">Let's look at some examples.</p>
 
           <aside class="notes">
+            <small>
             <p>
               while checks condition first, so code inside block might not be
               executed at all
@@ -900,13 +922,78 @@ System.out.println( (int) random ); // integer between 1 and 100
               do-while checks condition last, so code inside block will be
               executed at least once
             </p>
-            <p>beware the infamous infinite loop</p>
+            <p>
+              Beware the infamous infinite loop! <br>
+              - always have a way out  
+            </p>
+
+            <pre><code>
+// example 1: while
+int[] numbers = {11,2,5,88,1,93,6};
+int limit = 3; // only show first 3 numbers in the list
+int counter = 0;        
+while(counter &lt; limit) {
+  System.out.println( numbers[counter] );
+  counter++;
+}
+            </code></pre>
+
+            <pre><code>   
+// examples 2,2a: do-while, with break           
+int secret = 5;
+counter = 0;
+do {
+  if( numbers[counter] == secret ) {
+    System.out.println("Found secret number at position " + counter);                
+    // for example 2a: do-while with break
+    //break; // will stop when match is found
+  }            
+  counter++;
+} while( counter &lt; numbers.length );                      
+System.out.println("counter:" + counter);
+            </code></pre>
+
+            <p>
+              break and continue <br>
+              - tweak example 2 to show break example 2a <br>
+              - give example of continue
+            </p>
+
+            <pre><code>              
+// example 3: continue
+for(int n : numbers ) { // skip even numbers
+  if(n % 2 == 0) {
+    continue;  // skips iteration
+  }
+  System.out.println(n);
+}
+            </code></pre>
+
+
+          </small>
           </aside>
         </section>
 
         <section class="left">
           <h2>Switch-Case Statement</h2>
-          <p class="fragment">switch-case</p>
+          <pre class="fragment" data-id="code-animation">
+            <code class="hljs java" data-trim data-line-numbers>
+            switch (expression) {
+              case value1:
+                // code to be executed if expression matches value1
+                break;
+              case value2:
+                // code to be executed if expression matches value2
+                break;
+              case value3:
+                // code to be executed if expression matches value3
+                break;
+              // additional case statements if needed
+              default:
+                // code to be executed if none of the above cases match
+            }
+            </code>
+          </pre>
 
           <aside class="notes">
             <p>more readable than a lengthy if-statement</p>
