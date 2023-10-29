@@ -518,7 +518,8 @@
             </p>           
             <p>
               There is an older way, much more convoluted, but apparently more performant.
-              See: <a target="_blank" href="https://dmoj.ca/tips/#java-input">DMOJ Java Tips</a>
+              See: <a target="_blank" href="https://dmoj.ca/tips/#java-input">DMOJ Java Tips</a> <br>
+              <a target="_blank" href="https://onlinegdb.com/gOLdIHeou">Example2</a>
             </p>            
           </aside>
         </section>
@@ -619,25 +620,7 @@
           </p>
 
           <aside class="notes">
-            <small>
-              <pre><code>
-int x = 20;
-int y = 4;
-
-// x++ shortcut for x = x + 1
-
-// x++ vs ++x
-
-// x+=5 shortcut for x = x + 5
-
-// note order of operations
-int result1 = x + y / 2;
-int result2 = (x + y) / 2;
-
-System.out.println( result1 );
-System.out.println( result2 );
-              </code></pre>
-            </small>
+            <a target="_blank" href="https://onlinegdb.com/UT93MXTagn">Example</a>
           </aside>
         </section>
 
@@ -648,33 +631,7 @@ System.out.println( result2 );
           <p class="fragment slide-code">Math.random()</p>
 
           <aside class="notes">
-            <small>
-              <pre><code>                
-// power
-int y = 4;
-System.out.println( Math.pow(y,2) );
-              
-double random;
-int limit;
-
-// generate a random number
-random = Math.random();
-System.out.println( random ); // between 0 and 1 (but never 1)
-
-// random between 0 and n-1
-limit = 100;
-random = Math.random() * limit;
-System.out.println( random ); // between 0 and 99
-
-// but we want integers
-random = Math.random() * limit;
-System.out.println( (int) random ); // integer between 0 and 99
-
-// but we want integers between 1 and 100
-random = ( Math.random() * limit ) + 1;
-System.out.println( (int) random ); // integer between 1 and 100                
-              </code></pre>
-            </small>
+            <a target="_blank"  href="https://onlinegdb.com/kP6t1jiYO">Example</a>            
           </aside>
         </section>
 
@@ -698,6 +655,7 @@ System.out.println( (int) random ); // integer between 1 and 100
 
         <section class="left">
           <h2>Conditional Statements</h2>
+          <p class="fragment">(a.k.a. IF statements)</p>
           <p class="fragment">
             If something is true then do this, otherwise do that.
           </p>
@@ -713,20 +671,23 @@ System.out.println( (int) random ); // integer between 1 and 100
           
           <aside class="notes">
             <p>
-              These last two types of operators (comparison and logical
-              operators) come in especially handy for use in conditional
+              These last two types of operators (comparison and logical) 
+              come in especially handy for use in conditional (IF)
               statements.
             </p>
-            <p>Ex1 basic IF: input age; if age &lt; 13 "not a teen"</p>
-
-            <p>Ex2 add ELSE: else "you are a teen"</p>
+            <p><a target="_blank" href="https://onlinegdb.com/gl85-h5w8">Example</a>
+              Ex1 basic IF: input age; if age &lt; 13 "not a teen"</p>
 
             <p>
+              <a target="_blank" href="https://onlinegdb.com/RDpYPdiGY">Example2</a>
+              Ex2 add ELSE: else "you are a teen"
+              <br><br>            
               Can anyone see the problem with this?<br />
               What if input was 30??
             </p>
 
             <p>
+              <a target="_blank" href="https://onlinegdb.com/ivhrymUik">Example3</a>
               Ex3 add AND logical op: <br />
               so better: if( age &gt;= 13 &amp;&amp; age &lt;= 19) <br />
               then "teen" <br />
@@ -734,6 +695,7 @@ System.out.println( (int) random ); // integer between 1 and 100
             </p>
 
             <p>
+              <a target="_blank" href="https://onlinegdb.com/N2RPkoN7tN">Example4</a>
               Ex4 OR logical op: if( age &lt; 16 || age &gt; 90) <br />
               then "should not be driving" <br />
               else "drive on"
