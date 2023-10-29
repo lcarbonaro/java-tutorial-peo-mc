@@ -34,7 +34,7 @@
           <h2>Java Tutorial</h2>
           <p style="margin-top: 100px">
             Prepared for
-            <a href="https://peo-mc.ca/">PEO Mississauga Chapter</a>
+            <a target="_blank" href="https://peo-mc.ca/">PEO Mississauga Chapter</a>
           </p>
           <p style="margin-top: 25px">
             Online High School Coding Challenge 2023
@@ -60,7 +60,7 @@
 
           <p class="fragment">
             My name is
-            <a href="https://www.linkedin.com/in/lescarbonaro/">Les Carbonaro</a
+            <a target="_blank" href="https://www.linkedin.com/in/lescarbonaro/">Les Carbonaro</a
             >.
           </p>
           <p class="fragment">
@@ -69,7 +69,7 @@
           </p>
           <p class="fragment">
             I also host a beginner-friendly meet-up group called
-            <a href="https://www.meetup.com/mississauga-coding/"
+            <a target="_blank" href="https://www.meetup.com/mississauga-coding/"
               >Mississauga Coding</a
             >.
           </p>
@@ -89,12 +89,12 @@
             <h2>Pre-requisites</h2>
             <p class="fragment">
               Either download and install the
-              <a
+              <a target="_blank"
                 href="https://www.oracle.com/ca-en/java/technologies/downloads/"
                 >JDK</a
               >
               and
-              <a href="https://download.jetbrains.com/idea/ideaIC-2023.2.2.exe"
+              <a target="_blank" href="https://download.jetbrains.com/idea/ideaIC-2023.2.2.exe"
                 >a code editor or IDE</a
               >.
             </p>
@@ -103,7 +103,7 @@
             </p>
             <p class="fragment">
               for example:
-              <a href="https://www.onlinegdb.com/online_java_compiler"
+              <a target="_blank" href="https://www.onlinegdb.com/online_java_compiler"
                 >OnlineGDB</a
               >
             </p>
@@ -125,23 +125,23 @@
           <section class="left">
             <ul>
               <li>
-                <a href="https://www.onlinegdb.com/online_java_compiler"
+                <a target="_blank" href="https://www.onlinegdb.com/online_java_compiler"
                   >OnlineGDB</a
                 >
               </li>
               <li>
-                <a href="https://www.codiva.io">Codiva</a>
+                <a target="_blank" href="https://www.codiva.io">Codiva</a>
               </li>
               <li>
-                <a href="https://onecompiler.com">OneCompiler</a>
+                <a target="_blank" href="https://onecompiler.com">OneCompiler</a>
               </li>
               <li>
-                <a href="https://qa-mktg.codingrooms.com/compiler/java/"
+                <a target="_blank" href="https://qa-mktg.codingrooms.com/compiler/java/"
                   >CodingRooms</a
                 >
               </li>
               <li>
-                <a href="https://replit.com">ReplIt</a>
+                <a target="_blank" href="https://replit.com">ReplIt</a>
               </li>
               <li>a number of others ...</li>
             </ul>
@@ -180,7 +180,7 @@
           </aside>
         </section>
 
-        <section>
+        <section data-visibility="hidden" id="fun-fact-1">
           <img src="java-fun-fact.png" alt="java-fun-fact" />
           <p class="fragment fade-up">Who invented Java?</p>
           <p class="fragment fade-left">
@@ -423,8 +423,8 @@
             <p>Naming convention is camelCase</p>
           </aside>
         </section>
-        <!--
-        <section class="left">
+        
+        <section  data-visibility="hidden" id="casting" class="left">
           <h2>Variable Type Conversion</h2>
           <p class="fragment">(Also known as Casting)</p>
 
@@ -460,7 +460,7 @@
             </p>
           </aside>
         </section>
-      -->
+      
 
         <section class="left">
           <h2>Inputs</h2>
@@ -524,10 +524,16 @@ public class Main {
   }
 }</code></pre>
             </small>
+
+             <p>
+              there is an older way, much more convoluted, but apparently more performant <br>
+              see: <a target="_blank" href="https://dmoj.ca/tips/#java-input">DMOJ Java Tips</a>
+            </p>
+            
           </aside>
         </section>
 
-        <section class="left">
+        <section data-visibility="hidden" class="left">
           <h2>Inputs cont.</h2>
 
           <pre class="fragment" data-id="code-animation">
@@ -551,7 +557,7 @@ public class Main {
             		// note that must catch exception
             		try {
                     st = new StringTokenizer(br.readLine());
-                } catch (IOException e) {
+                } catch(IOException e) {
                     e.printStackTrace();
                 }
             		
@@ -594,25 +600,25 @@ public class Main {
             <small>
               <pre><code>
 System.out.println ("What is your name?");
-String name = input.nextLine ();
+String name = input.nextLine();
 System.out.println ("What is your number?");
-String phone = input.nextLine ();
+String phone = input.nextLine();
 
-System.out.println ("Hi " + name + ". Your name is "+
+System.out.println("Hi " + name + ". Your name is "+
 name.length() +" letters long." );
     
-System.out.println ("Checking is your name Fred? "+
+System.out.println("Checking is your name Fred? "+
 name.equals("Fred") );
 
 System.out.println("Your initial is: " + name.charAt(0));
 
-System.out.println ("Your area code is " + phone.substring(0,3) );            
+System.out.println("Your area code is " + phone.substring(0,3) );            
           </code></pre>
             </small>
           </aside>
         </section>
 
-        <section>
+        <section data-visibility="hidden" id="fun-fact-2">
           <img src="java-fun-fact.png" alt="java-fun-fact" />
           <p class="fragment fade-up">What was Java called originally?</p>
           <p class="fragment fade-left">
@@ -758,7 +764,7 @@ System.out.println( (int) random ); // integer between 1 and 100
 
             <p>
               Ex3 add AND logical op: <br />
-              so better: if ( age &gt;= 13 &amp;&amp; age &lt;= 19) <br />
+              so better: if( age &gt;= 13 &amp;&amp; age &lt;= 19) <br />
               then "teen" <br />
               else "not a teen"
             </p>
@@ -833,7 +839,7 @@ System.out.println( (int) random ); // integer between 1 and 100
           <p class="fragment">For</p>
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
-            for (initialisation; condition; iteration) {
+            for( initialise; check; increment ) {
 
               // Code to be executed on each iteration
         
@@ -844,7 +850,7 @@ System.out.println( (int) random ); // integer between 1 and 100
           <p class="fragment">For-Each</p>
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
-            for (dataType variableName : collectionName) {
+            for(dataType variableName : arrayName) {
 
               // Code to be executed on each element
       
@@ -861,7 +867,7 @@ System.out.println( (int) random ); // integer between 1 and 100
               - condition to keep going <br />
               - increment counter <br />
               <pre><code>
-              for (int i = 1; i &lt;= 5; i++) {
+              for(int i = 1; i &lt;= 5; i++) {
                 System.out.println(i);              
               }
               </code></pre>
@@ -872,8 +878,8 @@ System.out.println( (int) random ); // integer between 1 and 100
               - variable name each element<br />
               - array name <br />
               <pre><code>
-                int[] numbers = {1, 2, 3, 4, 5};
-                for (int num : numbers) {                
+                int[] numbers = new int[]{1, 2, 3, 4, 5};
+                for(int num : numbers) {                
                     System.out.println(num);               
                 }
               </code></pre>
@@ -887,7 +893,7 @@ System.out.println( (int) random ); // integer between 1 and 100
 
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
-            while (condition) {
+            while(condition) {
 
                 // Code to be executed as long as the condition is true
 
@@ -903,7 +909,7 @@ System.out.println( (int) random ); // integer between 1 and 100
 
                 // Code to be executed at least once
 
-            } while (condition);                      
+            } while(condition);                      
             </code>
           </pre>
 
@@ -926,7 +932,7 @@ System.out.println( (int) random ); // integer between 1 and 100
 
               <pre><code>
 // example 1: while
-int[] numbers = {11,2,5,88,1,93,6};
+int[] numbers = new int[]{11,2,5,88,1,93,6};
 int limit = 3; // only show first 3 numbers in the list
 int counter = 0;        
 while(counter &lt; limit) {
@@ -972,7 +978,7 @@ for(int n : numbers ) { // skip even numbers
           <h2>Switch-Case Statement</h2>
           <pre class="fragment" data-id="code-animation">
             <code class="hljs java" data-trim data-line-numbers>
-            switch (expression) {
+            switch(expression) {
               case value1:
                 // code to be executed if expression matches value1
                 break;
@@ -1129,7 +1135,7 @@ public static int calcSum(int[] nums) {
           </aside>
         </section>
 
-        <section>
+        <section data-visibility="hidden" id="fun-fact-3">
           <img src="java-fun-fact.png" alt="java-fun-fact" />
           <p class="fragment fade-up">What year was Java launched?</p>
           <p class="fragment fade-left">Java 1.0 came out in 1996.</p>
@@ -1239,7 +1245,7 @@ public class Player {
                 player1.score = 0;
             
                 // call an instance method
-                System.out.println ( player1.getPlayerStatus() );                
+                System.out.println( player1.getPlayerStatus() );                
               </code></pre>
             </small>
 
@@ -1263,19 +1269,19 @@ public class Player {
 
           <ul class="fragment">
             <li>
-              <a href="https://dev.java/learn/language-basics/">Dev.Java</a>
+              <a target="_blank" href="https://dev.java/learn/language-basics/">Dev.Java</a>
             </li>
 
             <li>
-              <a href="https://www.w3schools.com/java/">W3 Java</a>
+              <a target="_blank" href="https://www.w3schools.com/java/">W3 Java</a>
             </li>
 
             <li>
-              <a href="https://www.freecodecamp.org/news/learn-the-basics-of-java-programming/">freeCodeCamp Java</a>
+              <a target="_blank" href="https://www.freecodecamp.org/news/learn-the-basics-of-java-programming/">freeCodeCamp Java</a>
             </li>            
 
             <li>
-              <a href="https://rebrand.ly/java-tutorial"
+              <a target="_blank" href="https://rebrand.ly/java-tutorial"
                 >https://rebrand.ly/java-tutorial</a> (these slides)
             </li>
           </ul>

@@ -18,6 +18,7 @@ import Search from 'reveal.js/plugin/search/search.esm';
 */
 
 let deck = new Reveal({
-   plugins: [ Markdown,Highlight,Zoom,Notes,Search ]
+   plugins: [ Markdown,Highlight,Zoom,Notes,Search ],
+   slideNumber: 'c/t'
 })
 deck.initialize();
