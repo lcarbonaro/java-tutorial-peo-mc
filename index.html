@@ -675,13 +675,13 @@
               come in especially handy for use in conditional (IF)
               statements.
             </p>
-            <p><a target="_blank" href="https://onlinegdb.com/gl85-h5w8">Example</a>
-              Ex1 basic IF: input age; if age &lt; 13 "not a teen"</p>
-
+            <p>
+              <a target="_blank" href="https://onlinegdb.com/gl85-h5w8">Example</a>
+              Ex1 basic IF: input age; if age &lt; 13 "not a teen"
+            </p>
             <p>
               <a target="_blank" href="https://onlinegdb.com/RDpYPdiGY">Example2</a>
-              Ex2 add ELSE: else "you are a teen"
-              <br><br>            
+              Ex2 add ELSE: else "you are a teen" <br>                
               Can anyone see the problem with this?<br />
               What if input was 30??
             </p>
@@ -690,15 +690,13 @@
               <a target="_blank" href="https://onlinegdb.com/ivhrymUik">Example3</a>
               Ex3 add AND logical op: <br />
               so better: if( age &gt;= 13 &amp;&amp; age &lt;= 19) <br />
-              then "teen" <br />
-              else "not a teen"
+              then "teen" else "not a teen"
             </p>
 
             <p>
               <a target="_blank" href="https://onlinegdb.com/N2RPkoN7tN">Example4</a>
               Ex4 OR logical op: if( age &lt; 16 || age &gt; 90) <br />
-              then "should not be driving" <br />
-              else "drive on"
+              then "should not be driving" else "drive on"
             </p>
           </aside>
         </section>
@@ -712,50 +710,31 @@
           <p class="fragment">- access by zero-based index</p>
           <p class="fragment">- can be multi-dimensional</p>
 
-          <aside class="notes">
-            <small>
+          <aside class="notes">            
               <p>
                 An array is a fixed-size collection of elements of the same
-                type.
-                <br />
-                A way to store multiple values in one variable. One type of
-                collection.
+                type.<br />
+                A way to store multiple values in one variable. <br>
+                It is one type of collection in Java.
               </p>
-              <small>
-                <pre><code>
-              // as separate variables 
-              String name1 = "Tom"; 
-              String name2 = "Richard"; 
-              String name3 = "Harriet"; 
-              // as an array 
-              String[] names = new String[]{"Tom","Richard","Harriet"};
-            </code>
-            </pre>
-              </small>
+             
               <p>
-                to declare with known values, see names example above<br />
-                to declare empty array
+                Can declare with known values; see <a target="_blank" href="https://onlinegdb.com/gy3Jv3MYq">Example</a> <br>
+                <br />
+                Or can declare empty array and populate after; see 
+                <a target="_blank" href="https://onlinegdb.com/0zQqnBlM2">Example2</a>
               </p>
-              <small>
-                <pre><code>
-              int[] numbers = new int[3];
-              numbers[0] = 100;
-              numbers[1] = 401;
-              numbers[2] = 42;
-              numbers[3] = 13; // will give out-of-bounds error
-            </code>
-          </pre>
-              </small>
+             
               <p>
                 Fixed size is determined at the time of declaration.<br />
                 Once an array is created, its size cannot be changed. <br />
                 Can check size using .length property (not method)<br />
-                Access via (zero-based) index System.out.println( names[2] );
-                <br />
-                Can change values via index too <br />
-                names[0] = "Thomas";
+                Access via (zero-based) index <br />
+                Can change values via index too                 
               </p>
-            </small>
+              <p>Arrays can be multi-dimensional (array of arrays) <br> 
+                Example of this in a minute.</p>
+            
           </aside>
         </section>
 
@@ -785,29 +764,25 @@
           </pre>
 
           <aside class="notes">
-            <small>
+            <p>
               for loop <br />
               - initialise a counter <br />
               - condition to keep going <br />
               - increment counter <br />
-              <pre><code>
-              for(int i = 1; i &lt;= 5; i++) {
-                System.out.println(i);              
-              }
-              </code></pre>
-            </small>
-            <small>
+              <a target="_blank" href="https://onlinegdb.com/QKlu2GgQp" >Example</a>
+            </p>
+            <p>
               for-each loop <br />
               - data type <br />
               - variable name each element<br />
               - array name <br />
-              <pre><code>
-                int[] numbers = new int[]{1, 2, 3, 4, 5};
-                for(int num : numbers) {                
-                    System.out.println(num);               
-                }
-              </code></pre>
-            </small>
+              <a target="_blank" href="https://onlinegdb.com/AtovDy3XQ">Example2</a>
+            </p>
+
+            <p>
+              for loops can be nested <br>
+              <a target="_blank" href="https://onlinegdb.com/IXBJdg8Wgx">Example3</a>
+            </p>
           </aside>
         </section>
 
@@ -838,12 +813,10 @@
           </pre>
 
           <aside class="notes">
-            <small>
+            
               <p>
                 while checks condition first, so code inside block might not be
-                executed at all
-              </p>
-              <p>
+                executed at all <br>              
                 do-while checks condition last, so code inside block will be
                 executed at least once
               </p>
@@ -852,47 +825,19 @@
                 - always have a way out
               </p>
 
-              <pre><code>
-// example 1: while
-int[] numbers = new int[]{11,2,5,88,1,93,6};
-int limit = 3; // only show first 3 numbers in the list
-int counter = 0;        
-while(counter &lt; limit) {
-  System.out.println( numbers[counter] );
-  counter++;
-}
-            </code></pre>
-
-              <pre><code>   
-// examples 2,2a: do-while, with break           
-int secret = 5;
-counter = 0;
-do {
-  if( numbers[counter] == secret ) {
-    System.out.println("Found secret number at position " + counter);                
-    // for example 2a: do-while with break
-    //break; // will stop when match is found
-  }            
-  counter++;
-} while( counter &lt; numbers.length );                      
-System.out.println("counter:" + counter);
-            </code></pre>
+              <p>
+                while-loop see <a target="_blank" href="https://onlinegdb.com/iGYoqBuaX7">Example</a> <br>              
+                do-while loop see <a target="_blank" href="https://onlinegdb.com/0xq3rZ2IL">Example2</a>
+              </p>            
 
               <p>
-                break and continue <br />
-                - tweak example 2 to show break example 2a <br />
-                - give example of continue
+                Break and Continue <br>
+                - break - exits loop altogether; breaks out of loop <br>
+                - see <a target="_blank" href="https://onlinegdb.com/rD89W9Jeh">Example3</a> <br>
+                - continue - skips iteration; continues from top of loop <br>
+                - see <a target="_blank" href="https://onlinegdb.com/ou329lwGA">Example4</a>
               </p>
-
-              <pre><code>              
-// example 3: continue
-for(int n : numbers ) { // skip even numbers
-  if(n % 2 == 0) {
-    continue;  // skips iteration
-  }
-  System.out.println(n);}
-            </code></pre>
-            </small>
+             
           </aside>
         </section>
 
@@ -915,33 +860,12 @@ for(int n : numbers ) { // skip even numbers
           </pre>
 
           <aside class="notes">
-            <small
-              >When many values to check, switch more readable than a lengthy
-              if-statement</small
-            >
-            <small>
-              <pre><code>
-Scanner input = new Scanner(System.in);	    
-System.out.println("Menu Option 1");
-System.out.println("Menu Option 2");
-System.out.println("Menu Option 3");
-System.out.println("Enter an option:");              
-int choice = input.nextInt();              
-switch(choice) {
-  case 1:
-    System.out.println("ONE");    
-    break;
-  case 2:
-    System.out.println("TWO");    
-    break;
-  case 3:
-    System.out.println("THREE");        
-    break;  
-  default:
-    System.out.println("That is not a valid option!");
-}
-            </code></pre>
-            </small>
+            <p>
+              When there are several values to check, <br>
+              switch-case may be more readable and concise <br> 
+              than an if-statement
+            </p>
+            <a target="_blank" href="https://onlinegdb.com/kB6ztzoIs">Example</a>
           </aside>
         </section>
 
@@ -972,8 +896,10 @@ switch(choice) {
               </p>
 
               <p>
-                WHY? To organise code, make it more reusable, <br />
-                and make programs more modular and structured
+                WHY? <br>
+                - organise code <br>
+                - make code more reusable <br />
+                - make programs more modular and structured
               </p>
 
               <p>
@@ -1007,12 +933,12 @@ switch(choice) {
             <small>
               <p>
                 HOW? <br />
-                access modifier <br />
-                return type <br />
-                method name <br />
-                parameter list (optional) <br />
-                code block <br />
-                return (optional)
+                - access modifier <br />
+                - return type <br />
+                - method name <br />
+                - parameter list (optional) <br />
+                - code block <br />
+                - return (optional)
               </p>
               <p>
                 Note that there are two parts to this: <br />
@@ -1022,33 +948,16 @@ switch(choice) {
 
               <p>
                 examples:<br />
-                no-return no-parms: sayHello()<br />
-                some parms sayAnything(String msg)<br />
-                some return calcSum(int[] numbers)
+                - no-return no-parms: sayHello()               
+                  <a target="_blank" href="https://onlinegdb.com/yJDNsgy7Y">Example</a> <br>
+                - some parms sayAnything(String msg) 
+                  <a target="_blank" href="https://onlinegdb.com/-JktD2rel">Example2</a> <br>
+                - some parms sayAnythingAgain(String msg, int times) 
+                  <a target="_blank" href="https://onlinegdb.com/y9VtUDQCz">Example3</a> <br>
+                - some return calcSum(int[] numbers) 
+                  <a  target="_blank" href="https://onlinegdb.com/jpUP4y2TQ">Example4</a>
               </p>
 
-              <small>
-                <pre><code>
-// defining function example 1
-public static void sayHello() {
-    System.out.println("function says hello!!");
-}
-
-// defining function example 2
-public static void sayAnything(String msg) {
-    System.out.println(msg);
-}
-
-// defining function example 3
-public static int calcSum(int[] nums) {
-    int sum = 0;
-    for(int n : nums) {
-        sum += n;
-    }
-    return sum;
-}
-                </code></pre>
-              </small>
             </small>
           </aside>
         </section>
@@ -1094,32 +1003,7 @@ public static int calcSum(int[] nums) {
             <p>But Java also allows us to define our own classes.</p>
             <p>A class is a combination of variables and methods.</p>
 
-            <small>
-              <pre><code>
-public class Player {    
-  // data attributes 
-  String name;
-  int score;
-  
-  
-  // methods that do something on 
-  // or with the data attributes
-  
-  // display player status
-  public String getPlayerStatus() {
-      return "Player: " + name + " Score: " + score;
-  }
-  
-  // give a player points
-  public void awardPoints(int p) {
-      score += p;
-  }
-  
-  //
-  
-}
-            </code></pre>
-            </small>
+            <a  target="_blank" href="https://onlinegdb.com/KahZJ8ib9">Example</a>
           </aside>
         </section>
 
@@ -1133,7 +1017,7 @@ public class Player {
           
           <aside class="notes">
             <p>
-              "But you said OBJECT oriented not CLASS oriented!" <br />
+              "But wait! You said OBJECT oriented not CLASS oriented!" <br />
               So which is it? <br />
               What's an object? and what's it got to do with a class?
             </p>
@@ -1150,32 +1034,7 @@ public class Player {
               and use them in your main program.
             </p>
 
-            <small>
-              <pre><code>
-                // create an instance 
-                Player player1 = new Player();
-                
-                // assign some instance attributes
-                player1.name = "Tom";
-                player1.score = 0;
-            
-                // call an instance method
-                System.out.println( player1.getPlayerStatus() );                
-              </code></pre>
-            </small>
-
-
-            <small>
-              <pre><code>
-                // player wins 10 points
-                player1.score += 10;            
-                System.out.println( player1.getPlayerStatus() );
-            
-                // player is given 5 extra points
-                player1.awardPoints(5);            
-                System.out.println( player1.getPlayerStatus() );                
-              </code></pre>
-            </small>
+            <a target="_blank" href="https://onlinegdb.com/q0zEGCON6">Example2</a>
           </aside>
         </section>
 
@@ -1197,7 +1056,7 @@ public class Player {
             
           </ul>
 
-          <p class="fragment">Any Questions?</p>
+          <p class="fragment">Any questions?</p>
 
           <aside class="notes">
             <p>As you may imagine, we have barely scratched the surface of Java.</p>
