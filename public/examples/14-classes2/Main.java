@@ -16,8 +16,8 @@ public class Main {
         player1.score += 10;            
         System.out.println( player1.getPlayerStatus() );
             
-        // player1 is given 5 extra points
-        player1.awardPoints(5);            
+        // player1 is given 5 bonus points
+        player1.awardBonusPoints(5);            
         System.out.println( player1.getPlayerStatus() );                
               
 	}

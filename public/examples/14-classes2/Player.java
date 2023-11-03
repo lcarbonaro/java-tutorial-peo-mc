@@ -1,20 +1,20 @@
 public class Player {   
     
-  // data attributes 
+  // class attributes 
   String name;
   int score;
   
-  // methods that do something on or with 
-  // the data attributes
+  // class methods 
+  // do something to/with class attributes
   
   // display player status
   public String getPlayerStatus() {
       return "Player: " + name + " Score: " + score;
   }
   
-  // give a player some points
-  public void awardPoints(int p) {
-      score += p;
+  // give player some bonus points
+  public void awardBonusPoints(int points) {
+      score += points;
   }
   
 }

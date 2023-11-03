@@ -12,9 +12,9 @@ public class Player {
       return "Player: " + name + " Score: " + score;
   }
   
-  // give a player some points
-  public void awardPoints(int p) {
-      score += p;
+  // give player some bonus points
+  public void awardBonusPoints(int points) {
+      score += points;
   }
   
 }
