@@ -28,6 +28,6 @@ public class Game {
     private int getRandom() {
         int limit = 100; 
         double rnum = Math.random() * limit;
-        return (int) (rnum + 1); // between 1 and 6
+        return (int) (rnum + 1); // between 1 and 100
     }
 }
